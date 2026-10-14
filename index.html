@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="ms" class="dark" data-theme="emerald">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Zariff Legacy - Showcase Aplikasi</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            50: 'var(--color-50)',
+                            100: 'var(--color-100)',
+                            200: 'var(--color-200)',
+                            300: 'var(--color-300)',
+                            400: 'var(--color-400)',
+                            500: 'var(--color-500)',
+                            600: 'var(--color-600)',
+                            700: 'var(--color-700)',
+                            800: 'var(--color-800)',
+                            900: 'var(--color-900)',
+                            950: 'var(--color-950)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-50: #f0fdf4;
+            --color-100: #dcfce7;
+            --color-200: #bbf7d0;
+            --color-300: #86efac;
+            --color-400: #4ade80;
+            --color-500: #22c55e;
+            --color-600: #16a34a;
+            --color-700: #15803d;
+            --color-800: #166534;
+            --color-900: #14532d;
+            --color-950: #052e16;
+            --theme-gradient: linear-gradient(135deg, #16a34a, #10b981);
+        }
+        /* Color Theme Presets */
+        [data-theme="emerald"] {
+            --color-50: #f0fdf4; --color-100: #dcfce7; --color-200: #bbf7d0; --color-300: #86efac;
+            --color-400: #4ade80; --color-500: #22c55e; --color-600: #16a34a; --color-700: #15803d;
+            --color-800: #166534; --color-900: #14532d; --color-950: #052e16;
+            --theme-gradient: linear-gradient(135deg, #16a34a, #10b981);
+        }
+        [data-theme="blue"] {
+            --color-50: #eff6ff; --color-100: #dbeafe; --color-200: #bfdbfe; --color-300: #93c5fd;
+            --color-400: #60a5fa; --color-500: #3b82f6; --color-600: #2563eb; --color-700: #1d4ed8;
+            --color-800: #1e40af; --color-900: #1e3a8a; --color-950: #172554;
+            --theme-gradient: linear-gradient(135deg, #2563eb, #0284c7);
+        }
+        [data-theme="red"] {
+            --color-50: #fef2f2; --color-100: #ffe4e4; --color-200: #fecaca; --color-300: #fca5a5;
+            --color-400: #f87171; --color-500: #ef4444; --color-600: #dc2626; --color-700: #b91c1c;
+            --color-800: #991b1b; --color-900: #7f1d1d; --color-950: #450a0a;
+            --theme-gradient: linear-gradient(135deg, #dc2626, #e11d48);
+        }
+        [data-theme="yellow"] {
+            --color-50: #fefce8; --color-100: #fef9c3; --color-200: #fef08a; --color-300: #fde047;
+            --color-400: #facc15; --color-500: #eab308; --color-600: #ca8a04; --color-700: #a16207;
+            --color-800: #854d0e; --color-900: #713f12; --color-950: #422006;
+            --theme-gradient: linear-gradient(135deg, #d97706, #ca8a04);
+        }
+        [data-theme="orange"] {
+            --color-50: #fff7ed; --color-100: #ffedd5; --color-200: #fed7aa; --color-300: #fdba74;
+            --color-400: #fb923c; --color-500: #f97316; --color-600: #ea580c; --color-700: #c2410c;
+            --color-800: #9a3412; --color-900: #7c2d12; --color-950: #431407;
+            --theme-gradient: linear-gradient(135deg, #ea580c, #e11d48);
+        }
+        [data-theme="purple"] {
+            --color-50: #faf5ff; --color-100: #f3e8ff; --color-200: #e9d5ff; --color-300: #d8b4fe;
+            --color-400: #c084fc; --color-500: #a855f7; --color-600: #9333ea; --color-700: #7e22ce;
+            --color-800: #6b21a8; --color-900: #581c87; --color-950: #3b0764;
+            --theme-gradient: linear-gradient(135deg, #9333ea, #c084fc);
+        }
+        [data-theme="cyan_indigo"] {
+            --color-50: #ecfeff; --color-100: #cffafe; --color-200: #a5f3fc; --color-300: #67e8f9;
+            --color-400: #22d3ee; --color-500: #06b6d4; --color-600: #0891b2; --color-700: #0e7490;
+            --color-800: #155e75; --color-900: #164e63; --color-950: #083344;
+            --theme-gradient: linear-gradient(135deg, #0891b2, #4f46e5);
+        }
+        [data-theme="purple_pink"] {
+            --color-50: #fdf4ff; --color-100: #fae8ff; --color-200: #f5d0fe; --color-300: #f0abfc;
+            --color-400: #e879f9; --color-500: #d946ef; --color-600: #c026d3; --color-700: #a21caf;
+            --color-800: #86198f; --color-900: #701a75; --color-950: #4a044e;
+            --theme-gradient: linear-gradient(135deg, #c026d3, #e11d48);
+        }
+        [data-theme="amber_rose"] {
+            --color-50: #fff1f2; --color-100: #ffe4e6; --color-200: #fecdd3; --color-300: #fda4af;
+            --color-400: #fb7185; --color-500: #f43f5e; --color-600: #e11d48; --color-700: #be123c;
+            --color-800: #9f1239; --color-900: #881337; --color-950: #4c0519;
+            --theme-gradient: linear-gradient(135deg, #d97706, #e11d48);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(156, 163, 175, 0.5);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(107, 114, 128, 0.8);
+        }
+        .line-clamp-1 {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-toast {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+        .theme-bg-gradient {
+            background-image: var(--theme-gradient);
+        }
+        .logo-img-transparent {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 min-h-screen flex flex-col antialiased selection:bg-theme-500 selection:text-white">
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo & Name -->
+            <div class="flex items-center space-x-3 cursor-pointer select-none" onclick="resetFilters()">
+                <div id="brandLogoContainer" class="w-10 h-10 rounded-xl bg-theme-100 dark:bg-theme-950 flex items-center justify-center font-bold text-xl overflow-hidden shrink-0 border border-theme-300 dark:border-theme-800 transition-all">
+                    <span id="brandLogoText" class="text-theme-600 dark:text-theme-400 font-extrabold">Z</span>
+                    <img id="brandLogoImg" src="" alt="Brand Logo" class="w-full h-full object-contain hidden bg-transparent" onerror="handleLogoImgError()">
+                </div>
+                <div>
+                    <h1 id="brandNameHeader" class="text-xl font-extrabold bg-clip-text text-transparent theme-bg-gradient">
+                        Zariff Legacy
+                    </h1>
+                </div>
+            </div>
+            <!-- Header Action Buttons -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <button onclick="openContactModal()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition border border-emerald-200 dark:border-emerald-800">
+                    <i class="fa-brands fa-whatsapp text-emerald-600 dark:text-emerald-400 text-base"></i>
+                    <span class="hidden md:inline">Hubungi Developer</span>
+                </button>
+                <button id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="Tukar Mod Gelap/Terang" class="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition border border-gray-200 dark:border-gray-800">
+                    <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Banner Section -->
+        <section id="heroBannerSection" class="mb-10 text-center flex flex-col items-center justify-center bg-gradient-to-r from-theme-900/10 via-theme-900/5 to-transparent p-6 sm:p-12 rounded-3xl border border-theme-500/20 relative overflow-hidden shadow-sm transition-all min-h-[220px]">
+            <div id="bannerBgContainer" class="absolute inset-0 hidden">
+                <img id="bannerBgImg" src="" alt="Banner Background" class="w-full h-full object-cover" onerror="this.parentElement.classList.add('hidden')">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/80 to-gray-950/40"></div>
+            </div>
+            <div id="bannerContentContainer" class="max-w-3xl mx-auto relative z-10 flex flex-col items-center text-center">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-theme-100 text-theme-800 dark:bg-theme-950/90 dark:text-theme-300 mb-4 border border-theme-300 dark:border-theme-700 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-theme-500 animate-pulse"></span>
+                    <span id="bannerBadgeText">Showcase & Katalog Rasmi</span>
+                </div>
+                <h2 id="bannerTitle" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight">
+                    Inovasi Digital & Solusi Aplikasi Mudah
+                </h2>
+                <p id="bannerSubtitle" class="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+                    Terokai aplikasi yang dibangunkan untuk membantu kerja menjadi lebih mudah dan produktif.
+                </p>
+            </div>
+            <div id="bannerControls" class="mt-6 flex items-center justify-center gap-2 relative z-10"></div>
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-theme-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-10 -top-10 w-64 h-64 bg-theme-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        </section>
+
+        <!-- Controls: Search, Filter Category, Sort -->
+        <section id="appsSection" class="mb-8 space-y-4">
+            <div class="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
+                <div class="relative flex-grow max-w-lg">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="searchInput" oninput="handleSearchFilter()" placeholder="Cari aplikasi mengikut nama, tag, atau penerangan..."
+                           class="w-full pl-10 pr-10 py-2.5 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-theme-500 transition shadow-sm">
+                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="flex flex-wrap sm:flex-nowrap items-center gap-3">
+                    <div class="w-full sm:w-auto">
+                        <select id="categoryFilter" onchange="handleSearchFilter()" class="w-full py-2.5 px-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-theme-500 transition shadow-sm">
+                            <option value="ALL">Semua Kategori</option>
+                        </select>
+                    </div>
+                    <div class="w-full sm:w-auto">
+                        <select id="sortOption" onchange="handleSearchFilter()" class="w-full py-2.5 px-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-theme-500 transition shadow-sm">
+                            <option value="newest">Terbaharu Ditambah</option>
+                            <option value="oldest">Terawal Ditambah</option>
+                            <option value="name_asc">Nama (A - Z)</option>
+                            <option value="name_desc">Nama (Z - A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="activeTagFilterContainer" class="hidden flex items-center gap-2 text-xs">
+                <span class="text-gray-500">Menapis mengikut tag:</span>
+                <span id="activeTagBadge" class="px-2.5 py-1 rounded-lg bg-theme-100 dark:bg-theme-900 text-theme-800 dark:text-theme-200 font-bold flex items-center gap-1.5">
+                    <i class="fa-solid fa-tag text-[10px]"></i>
+                    <span id="activeTagText"></span>
+                    <button onclick="clearTagFilter()" class="hover:text-rose-500 ml-1"><i class="fa-solid fa-xmark"></i></button>
+                </span>
+            </div>
+            <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 px-1 pt-1">
+                <span id="appsCountLabel">Memuatkan aplikasi...</span>
+            </div>
+        </section>
+
+        <!-- Apps Cards Grid Container -->
+        <section id="appsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </section>
+
+        <!-- Empty State Message -->
+        <div id="emptyState" class="hidden py-16 text-center bg-white dark:bg-gray-900 rounded-2xl border border-dashed border-gray-300 dark:border-gray-800 p-8 my-6">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-400 text-2xl">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">Tiada Aplikasi Dijumpai</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-md mx-auto">Sila cuba perkataan carian lain atau tukar tetapan penapis kategori anda.</p>
+            <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-sm font-medium bg-theme-600 text-white rounded-xl hover:bg-theme-700 transition shadow">
+                Sifar Penapis
+            </button>
+        </div>
+    </main>
+
+    <!-- FOOTER (Contains Hidden Admin Trigger on Copyright Text) -->
+    <footer class="mt-auto border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 transition-colors py-6 select-none">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div onclick="handleAdminTrigger()" class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 inline-block py-1 px-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 transition" title="Akses Pentadbir">
+                &copy; <span id="footerYear">2026</span> <span id="footerBrandName">Zariff Legacy</span>. Hak Cipta Terpelihara.
+            </div>
+        </div>
+    </footer>
+
+    <!-- APP DETAIL MODAL -->
+    <div id="appDetailModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-2xl w-full border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden transform transition-all my-8">
+            <div class="relative h-48 sm:h-56 bg-gray-100 dark:bg-gray-800 overflow-hidden flex items-center justify-center">
+                <img id="detailAppImg" src="" alt="App Detail Image" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x400/1e293b/ffffff?text=Zariff+Legacy+App';">
+                <button onclick="closeModal('appDetailModal')" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white hover:bg-black/70 flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div id="detailFeaturedBadge" class="hidden absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">
+                    <i class="fa-solid fa-star mr-1"></i> Utama
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                    <div>
+                        <span id="detailAppCategory" class="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-md bg-theme-50 text-theme-700 dark:bg-theme-950 dark:text-theme-300 border border-theme-200 dark:border-theme-800 mb-2"></span>
+                        <h3 id="detailAppName" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                    </div>
+                    <span id="detailAppStatus" class="shrink-0 px-3 py-1 text-xs font-bold rounded-full"></span>
+                </div>
+                <div id="detailAppTagsContainer" class="flex flex-wrap gap-1.5 mb-3"></div>
+                <p id="detailAppShort" class="text-sm text-gray-600 dark:text-gray-300 italic mb-4 border-l-2 border-theme-500 pl-3 py-0.5"></p>
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Penerangan Lengkap & Butiran Fail</h4>
+                        <p id="detailAppFull" class="text-sm text-gray-700 dark:text-gray-200 whitespace-pre-line leading-relaxed bg-gray-50 dark:bg-gray-800/50 p-3.5 rounded-xl border border-gray-100 dark:border-gray-800/80"></p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-3">
+                        <div>
+                            <span class="block font-medium text-gray-400">Tarikh Ditambah:</span>
+                            <span id="detailAppCreated" class="text-gray-700 dark:text-gray-300"></span>
+                        </div>
+                        <div>
+                            <span class="block font-medium text-gray-400">Terakhir Dikemas Kini:</span>
+                            <span id="detailAppUpdated" class="text-gray-700 dark:text-gray-300"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a id="detailOpenAppBtn" href="#" target="_blank" class="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-theme-600 hover:bg-theme-700 text-white font-medium shadow-md transition text-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Aplikasi / Muat Turun Fail
+                    </a>
+                    <button id="detailContactBtn" onclick="contactAppInquiry()" class="inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-medium hover:bg-emerald-100 dark:hover:bg-emerald-900 transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Tentang App Ini
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT DEVELOPER MODAL -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-md w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 relative">
+            <button onclick="closeModal('contactModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Hubungi Developer</h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Sila pilih saluran pertanyaan atau pembelian di bawah.</p>
+            </div>
+            <div class="space-y-3">
+                <button id="whatsappContactLink" onclick="sendWhatsAppInquiry()" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-medium shadow-md transition">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <div class="text-left">
+                            <div class="text-sm font-bold">WhatsApp Direct</div>
+                            <div class="text-xs text-emerald-100" id="whatsappNumDisplay">Nombor belum diset</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+                <button id="emailContactLink" onclick="sendEmailInquiry()" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium transition">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-regular fa-envelope text-2xl text-theme-500"></i>
+                        <div class="text-left">
+                            <div class="text-sm font-bold">E-mel Rasmi</div>
+                            <div class="text-xs text-gray-500 dark:text-gray-400" id="emailDisplay">E-mel belum diset</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 dark:border-gray-800 text-center">
+                <button onclick="closeModal('contactModal')" class="text-xs text-gray-500 hover:underline">Tutup Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div id="adminLoginModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-sm w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 relative">
+            <button onclick="closeModal('adminLoginModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-theme-100 dark:bg-theme-950 text-theme-600 dark:text-theme-400 flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Log Masuk Admin</h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Masukkan PIN Pentadbir untuk pengesahan</p>
+            </div>
+            <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                <div>
+                    <label for="adminPinInput" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">PIN Admin</label>
+                    <input type="password" id="adminPinInput" required placeholder="Masukkan PIN Admin" class="w-full px-3.5 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-theme-500">
+                </div>
+                <button type="submit" class="w-full py-2.5 rounded-xl bg-theme-600 hover:bg-theme-700 text-white font-medium shadow-md transition text-sm">
+                    Sahkan PIN & Masuk
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD MODAL -->
+    <div id="adminDashboardModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-5xl w-full border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            <div class="px-6 py-4 bg-gray-50 dark:bg-gray-800/80 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="px-2.5 py-1 rounded-lg bg-theme-600 text-white font-bold text-xs">ADMIN</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">Papan Pemuka Zariff Legacy</h3>
+                    <span id="adminSyncStatusBadge" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-rose-500"></span> Penyimpanan Lokal
+                    </span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="logoutAdmin()" class="px-3 py-1.5 text-xs font-semibold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/50 hover:bg-red-100 rounded-lg transition">
+                        <i class="fa-solid fa-right-from-bracket mr-1"></i> Log Keluar
+                    </button>
+                    <button onclick="closeModal('adminDashboardModal')" class="p-1.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 rounded-lg">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap border-b border-gray-200 dark:border-gray-800 bg-gray-100/50 dark:bg-gray-950/50 px-4 sm:px-6 gap-1 sm:gap-2 pt-2 shrink-0">
+                <button id="tabBtnManage" onclick="switchAdminTab('manage')" class="px-3 py-2 text-xs font-semibold border-b-2 border-theme-500 text-theme-600 dark:text-theme-400">
+                    <i class="fa-solid fa-list-check mr-1"></i> Aplikasi
+                </button>
+                <button id="tabBtnCategories" onclick="switchAdminTab('categories')" class="px-3 py-2 text-xs font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <i class="fa-solid fa-tags mr-1"></i> Filter & Kategori
+                </button>
+                <button id="tabBtnBanners" onclick="switchAdminTab('banners')" class="px-3 py-2 text-xs font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <i class="fa-solid fa-image mr-1"></i> Banner
+                </button>
+                <button id="tabBtnSiteSettings" onclick="switchAdminTab('siteSettings')" class="px-3 py-2 text-xs font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <i class="fa-solid fa-palette mr-1"></i> Tema, Logo & Website
+                </button>
+                <button id="tabBtnSettings" onclick="switchAdminTab('settings')" class="px-3 py-2 text-xs font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <i class="fa-solid fa-code mr-1"></i> Backend & Sync
+                </button>
+            </div>
+
+            <div class="p-6 overflow-y-auto flex-grow">
+                <!-- TAB 1: MANAGE APPS -->
+                <div id="tabManageContent" class="space-y-6">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Aplikasi (<span id="adminTotalCount">0</span>)</h4>
+                        <button onclick="openAddNewForm()" class="px-3 py-1.5 text-xs font-medium bg-theme-600 hover:bg-theme-700 text-white rounded-lg transition flex items-center gap-1 shadow">
+                            <i class="fa-solid fa-plus"></i> Tambah App Baharu
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto border border-gray-200 dark:border-gray-800 rounded-xl">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-gray-50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-800">
+                                <tr>
+                                    <th class="p-3">App</th>
+                                    <th class="p-3">Kategori</th>
+                                    <th class="p-3">Tagging</th>
+                                    <th class="p-3">Status / Harga</th>
+                                    <th class="p-3">Utama</th>
+                                    <th class="p-3 text-right">Tindakan</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminAppsTableBody" class="divide-y divide-gray-100 dark:divide-gray-800">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="appFormContainer" class="hidden border-t border-gray-200 dark:border-gray-800 pt-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 id="formTabTitle" class="text-sm font-bold text-theme-600 dark:text-theme-400">Tambah Aplikasi Baharu</h4>
+                            <button type="button" onclick="closeAppForm()" class="text-xs text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark"></i> Tutup Borang</button>
+                        </div>
+                        <form id="appForm" onsubmit="handleAppFormSubmit(event)" class="space-y-4 bg-gray-50 dark:bg-gray-800/40 p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <input type="hidden" id="formAppId" value="">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="formAppName" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Nama Aplikasi *</label>
+                                    <input type="text" id="formAppName" required placeholder="Cth: Zariff POS System" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                </div>
+                                <div>
+                                    <label for="formCategory" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Kategori *</label>
+                                    <select id="formCategory" required class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="formStatus" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Status / Tag Harga</label>
+                                    <input type="text" id="formStatus" placeholder="Cth: Percuma, RM 50, Versi Beta" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                </div>
+                                <div>
+                                    <label for="formAppUrl" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Pautan App / Muat Turun File *</label>
+                                    <input type="url" id="formAppUrl" required placeholder="https://..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="formTags" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Tagging Produk (Pisahkan dengan koma)</label>
+                                <input type="text" id="formTags" placeholder="Cth: POS, Kasir, Inventori, Business, Web App" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                <p class="text-[10px] text-gray-400 mt-1">Tagging ini membolehkan pengguna mencari produk dengan pantas melalui carian atau tag pautan.</p>
+                            </div>
+                            <div>
+                                <label for="formImgUrl" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Pautan Gambar Preview (Menyokong Google Drive / URL Direct)</label>
+                                <input type="text" id="formImgUrl" placeholder="https://drive.google.com/file/d/... atau https://images.unsplash.com/..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                            </div>
+                            <div>
+                                <label for="formShortDesc" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Penerangan Ringkas</label>
+                                <input type="text" id="formShortDesc" placeholder="Penerangan 1 baris untuk paparan kad..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                            </div>
+                            <div>
+                                <label for="formFullDesc" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Penerangan Full / Butiran Terperinci / Nota Fail</label>
+                                <textarea id="formFullDesc" rows="4" placeholder="Jelaskan ciri-ciri utama aplikasi atau butiran fail anda..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500"></textarea>
+                            </div>
+                            <div class="flex items-center gap-2 pt-1">
+                                <input type="checkbox" id="formFeatured" class="rounded text-theme-600 focus:ring-theme-500 w-4 h-4">
+                                <label for="formFeatured" class="text-xs font-medium text-gray-700 dark:text-gray-300">Tetapkan sebagai Aplikasi Utama (Featured)</label>
+                            </div>
+                            <div class="flex justify-end gap-2 pt-3 border-t border-gray-200 dark:border-gray-700">
+                                <button type="button" onclick="closeAppForm()" class="px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 text-xs font-medium hover:bg-gray-100 dark:hover:bg-gray-800">Batal</button>
+                                <button type="submit" class="px-5 py-2 rounded-xl bg-theme-600 hover:bg-theme-700 text-white text-xs font-medium shadow">Simpan Aplikasi</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- TAB 2: CATEGORIES -->
+                <div id="tabCategoriesContent" class="hidden space-y-6">
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Filter & Kategori Aplikasi</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Anda boleh menambah, mengemaskini nama (edit), atau memadam filter kategori di bawah.</p>
+                    </div>
+                    <form onsubmit="handleAddCategory(event)" class="flex gap-2 max-w-md">
+                        <input type="text" id="newCategoryInput" required placeholder="Nama Kategori/Filter Baharu..." class="flex-grow px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                        <button type="submit" class="px-4 py-2 rounded-xl bg-theme-600 text-white text-xs font-medium shrink-0 hover:bg-theme-700 transition">
+                            <i class="fa-solid fa-plus mr-1"></i> Tambah
+                        </button>
+                    </form>
+                    <div id="categoriesListContainer" class="space-y-2 max-w-xl">
+                    </div>
+                </div>
+
+                <!-- TAB 3: BANNERS -->
+                <div id="tabBannersContent" class="hidden space-y-6">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Banner Utama Website</h4>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Menyokong gambar latar belakang format 16:9 dari URL Google Drive atau Direct Link.</p>
+                        </div>
+                        <button onclick="openBannerForm()" class="px-3 py-1.5 text-xs font-medium bg-theme-600 hover:bg-theme-700 text-white rounded-lg transition">
+                            <i class="fa-solid fa-plus mr-1"></i> Tambah Banner
+                        </button>
+                    </div>
+                    <div id="bannersList" class="space-y-3">
+                    </div>
+                    <div id="bannerFormContainer" class="hidden border-t border-gray-200 dark:border-gray-800 pt-4">
+                        <form id="bannerForm" onsubmit="handleSaveBanner(event)" class="space-y-3 bg-gray-50 dark:bg-gray-800/40 p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <input type="hidden" id="formBannerId" value="">
+                            <div>
+                                <label for="bannerBadge" class="block text-xs font-semibold mb-1">Tag Lencana (Badge)</label>
+                                <input type="text" id="bannerBadge" placeholder="Cth: Showcase & Katalog Rasmi" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs">
+                            </div>
+                            <div>
+                                <label for="bannerTitleInput" class="block text-xs font-semibold mb-1">Tajuk Utama Banner *</label>
+                                <input type="text" id="bannerTitleInput" required class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs">
+                            </div>
+                            <div>
+                                <label for="bannerSubtitleInput" class="block text-xs font-semibold mb-1">Sub-Tajuk / Penerangan Banner</label>
+                                <textarea id="bannerSubtitleInput" rows="2" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs"></textarea>
+                            </div>
+                            <div>
+                                <label for="bannerImgUrlInput" class="block text-xs font-semibold mb-1">Pautan Gambar Latar Banner 16:9 (Google Drive / Web Image Link)</label>
+                                <input type="text" id="bannerImgUrlInput" placeholder="https://drive.google.com/file/d/... (Format Nisbah 16:9 digalakkan)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs">
+                            </div>
+                            <div class="flex justify-end gap-2 pt-2">
+                                <button type="button" onclick="closeBannerForm()" class="px-3 py-1.5 rounded-lg border text-xs">Batal</button>
+                                <button type="submit" class="px-4 py-1.5 rounded-lg bg-theme-600 text-white text-xs font-medium">Simpan Banner</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- TAB 4: THEME & BRAND SETTINGS -->
+                <div id="tabSiteSettingsContent" class="hidden space-y-6">
+                    <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Tetapan Tema, Logo & Maklumat Website</h4>
+                    <form onsubmit="handleSaveSiteSettings(event)" class="space-y-4 max-w-lg">
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <label for="settingThemePalette" class="block text-xs font-bold text-gray-800 dark:text-gray-200 mb-1">Pilih Warna / Tema Aplikasi</label>
+                            <p class="text-[11px] text-gray-500 dark:text-gray-400 mb-2">Logo PNG transparan akan kekal tanpa background apabila tema ditukar.</p>
+                            <select id="settingThemePalette" onchange="previewColorTheme(this.value)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs font-semibold focus:ring-2 focus:ring-theme-500">
+                                <option value="emerald">Hijau Emerald (Default)</option>
+                                <option value="blue">Biru Sapphire</option>
+                                <option value="red">Merah Ruby</option>
+                                <option value="yellow">Kuning Amber</option>
+                                <option value="orange">Oren Sunset</option>
+                                <option value="purple">Ungu Amethyst</option>
+                                <option value="cyan_indigo">Campuran Cyan & Indigo (Gradiasi)</option>
+                                <option value="purple_pink">Campuran Ungu & Merah Jambu (Cyber Neon)</option>
+                                <option value="amber_rose">Campuran Amber & Rose (Sunset Gradiasi)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="settingBrandName" class="block text-xs font-semibold mb-1">Nama Brand / Website *</label>
+                            <input type="text" id="settingBrandName" required class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="settingBrandLetter" class="block text-xs font-semibold mb-1">Huruf Singkatan Logo</label>
+                                <input type="text" id="settingBrandLetter" maxlength="2" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs uppercase font-bold text-center">
+                            </div>
+                            <div>
+                                <label for="settingBrandLogoImg" class="block text-xs font-semibold mb-1">URL Logo PNG Transparan (Google Drive / PNG Link)</label>
+                                <input type="text" id="settingBrandLogoImg" placeholder="https://drive.google.com/..." class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs">
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-gray-400">Pautan fail logo imej transparan (PNG) dikekalkan tanpa warna latar belakang.</p>
+                        <div class="pt-2 border-t border-gray-200 dark:border-gray-800">
+                            <h5 class="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">Maklumat Perhubungan Developer</h5>
+                            <div class="space-y-3">
+                                <div>
+                                    <label for="settingWhatsapp" class="block text-xs font-semibold mb-1">Nombor WhatsApp (Format Antarabangsa tanpa +)</label>
+                                    <input type="text" id="settingWhatsapp" placeholder="60123456789" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                </div>
+                                <div>
+                                    <label for="settingEmail" class="block text-xs font-semibold mb-1">E-mel Rasmi Developer</label>
+                                    <input type="email" id="settingEmail" placeholder="zariff@example.com" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-200 dark:border-gray-800">
+                            <h5 class="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">Keselamatan Admin</h5>
+                            <div>
+                                <label for="settingAdminPin" class="block text-xs font-semibold mb-1">PIN Pentadbir Baru</label>
+                                <input type="text" id="settingAdminPin" placeholder="Tetapkan PIN baharu..." class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                            </div>
+                        </div>
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-theme-600 hover:bg-theme-700 text-white text-xs font-medium shadow">
+                            <i class="fa-solid fa-floppy-disk mr-1"></i> Simpan Tetapan Laman
+                        </button>
+                    </form>
+                </div>
+
+                <!-- TAB 5: BACKEND, APPSCRIPT SYNC & STATUS CHECK -->
+                <div id="tabSettingsContent" class="hidden space-y-6">
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Google Apps Script Integration (Cloud Sync)</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Masukkan URL Web App dari Google Apps Script untuk menyinkronkan data dengan Google Sheets.</p>
+                    </div>
+                    
+                    <div id="appscriptStatusBox" class="p-4 rounded-xl border flex items-center justify-between bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-900 text-rose-800 dark:text-rose-300">
+                        <div class="flex items-center gap-3">
+                            <div id="statusIcon" class="w-3 h-3 rounded-full bg-rose-500"></div>
+                            <div>
+                                <div id="statusTitle" class="text-xs font-bold">Google Apps Script Disambung: Tidak</div>
+                                <div id="statusDesc" class="text-[11px] text-gray-500 dark:text-gray-400">Aplikasi kini menggunakan penyimpanan lokal browser sahaja.</div>
+                            </div>
+                        </div>
+                        <button type="button" onclick="syncDataFromCloud()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 transition">
+                            <i class="fa-solid fa-rotate"></i> Uji Sambungan
+                        </button>
+                    </div>
+                    <form onsubmit="handleSaveApiUrl(event)" class="space-y-3 max-w-xl">
+                        <div>
+                            <label for="apiUrlInput" class="block text-xs font-semibold mb-1">URL Google Web App (Code.gs Executable)</label>
+                            <input type="url" id="apiUrlInput" placeholder="https://script.google.com/macros/s/.../exec" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs">
+                        </div>
+                        <div class="flex gap-2">
+                            <button type="submit" class="px-4 py-2 rounded-xl bg-theme-600 text-white text-xs font-medium hover:bg-theme-700">
+                                Simpan URL & Test Sync
+                            </button>
+                            <button type="button" onclick="syncDataFromCloud()" class="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-xs font-medium hover:bg-gray-300">
+                                <i class="fa-solid fa-rotate mr-1"></i> Muat Data dari Cloud
+                            </button>
+                        </div>
+                    </form>
+                    <hr class="border-gray-200 dark:border-gray-800">
+                    <div class="space-y-3">
+                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Backup Data (JSON)</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Muat turun salinan data portfolio anda atau muat naik fail data terdahulu.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="exportDataJSON()" class="px-3.5 py-2 rounded-xl bg-emerald-600 text-white text-xs font-medium hover:bg-emerald-700 transition">
+                                <i class="fa-solid fa-download mr-1"></i> Muat Turun Backup JSON
+                            </button>
+                            <label class="px-3.5 py-2 rounded-xl bg-blue-600 text-white text-xs font-medium hover:bg-blue-700 transition cursor-pointer">
+                                <i class="fa-solid fa-upload mr-1"></i> Import Backup JSON
+                                <input type="file" id="importJsonInput" accept=".json" onchange="importDataJSON(event)" class="hidden">
+                            </label>
+                            <button onclick="confirmResetDemoData()" class="px-3.5 py-2 rounded-xl bg-rose-600 text-white text-xs font-medium hover:bg-rose-700 transition">
+                                <i class="fa-solid fa-rotate-left mr-1"></i> Reset Ke Data Demo Asal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT CATEGORY MODAL -->
+    <div id="editCategoryModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-sm w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 relative">
+            <h3 class="text-base font-bold text-gray-900 dark:text-white mb-3">Kemaskini Filter / Kategori</h3>
+            <form onsubmit="handleSaveEditedCategory(event)" class="space-y-4">
+                <input type="hidden" id="editCategoryOldName" value="">
+                <div>
+                    <label for="editCategoryNewName" class="block text-xs font-semibold mb-1">Nama Baharu Kategori</label>
+                    <input type="text" id="editCategoryNewName" required class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                </div>
+                <div class="flex justify-end gap-2">
+                    <button type="button" onclick="closeModal('editCategoryModal')" class="px-3 py-1.5 rounded-lg border text-xs">Batal</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-lg bg-theme-600 text-white text-xs font-medium">Simpan Perubahan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CONFIRM DELETE MODAL -->
+    <div id="confirmDeleteModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-sm w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 relative">
+            <div class="text-center">
+                <div class="w-12 h-12 rounded-full bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Pengesahan Pemadaman</h3>
+                <p id="confirmDeleteMessage" class="text-xs text-gray-500 dark:text-gray-400 mt-2">Adakah anda pasti mahu memadam item ini?</p>
+            </div>
+            <div class="flex gap-3 mt-6">
+                <button onclick="closeModal('confirmDeleteModal')" class="flex-1 py-2 rounded-xl border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    Batal
+                </button>
+                <button id="confirmDeleteExecuteBtn" class="flex-1 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-medium shadow transition">
+                    Padam
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATIONS -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        /* ==========================================================================
+           KONFIGURASI GOOGLE APPS SCRIPT URL
+           Tampal Web App URL anda di dalam pengenalan pemalar (constant) di bawah:
+           ========================================================================== */
+        const API_URL = " https://script.google.com/macros/s/AKfycbyIfJ2xGN2RuHay-en2ig6J-JA-ZRQXyJsiAIJArbezMhZ1E8nwRTvHXs9CT2d6VolSww/exec";
+
+        // Default Initial Dataset Fallback
+        const DEFAULT_STATE = {
+            brand: {
+                name: "Zariff Legacy",
+                letter: "Z",
+                logoUrl: "",
+                whatsapp: "60123456789",
+                email: "zariff.legacy@example.com",
+                pin: "1234",
+                theme: "emerald"
+            },
+            categories: [
+                "Sistem Web",
+                "Aplikasi Mobile",
+                "Script / Automation",
+                "Templat Excel/Sheet",
+                "Tool Utility"
+            ],
+            banners: [
+                {
+                    id: "b1",
+                    badge: "Showcase & Katalog Rasmi",
+                    title: "Inovasi Digital & Solusi Aplikasi Mudah",
+                    subtitle: "Terokai aplikasi yang dibangunkan untuk membantu kerja menjadi lebih mudah dan produktif.",
+                    imgUrl: ""
+                }
+            ],
+            apps: [
+                {
+                    id: "app-1",
+                    name: "Zariff POS System",
+                    category: "Sistem Web",
+                    status: "RM 150",
+                    appUrl: "https://example.com/demo-pos",
+                    imgUrl: "https://images.unsplash.com/photo-1556742049-0a670f4a4591?auto=format&fit=crop&w=800&q=80",
+                    shortDesc: "Sistem Point of Sales berasaskan web lengkap untuk kedai runcit & cafe.",
+                    fullDesc: "Sistem POS pintar yang menyokong pengurusan inventori, cetakan resit terma, pengurusan jualan harian, serta laporan analisis bulanan.",
+                    tags: ["POS", "Kasir", "Inventori", "Web App"],
+                    featured: true,
+                    createdAt: "2026-01-10",
+                    updatedAt: "2026-02-15"
+                },
+                {
+                    id: "app-2",
+                    name: "Quick WhatsApp Link Generator",
+                    category: "Tool Utility",
+                    status: "Percuma",
+                    appUrl: "https://example.com/wa-gen",
+                    imgUrl: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80",
+                    shortDesc: "Aplikasi percuma bina pautan terus WhatsApp dengan pesanan khas.",
+                    fullDesc: "Bina pautan WhatsApp perniagaan dengan mesej tersuai serta merta tanpa perlu menyimpan nombor telefon pelanggan.",
+                    tags: ["WhatsApp", "Utility", "Pemasaran", "Percuma"],
+                    featured: false,
+                    createdAt: "2026-01-15",
+                    updatedAt: "2026-01-15"
+                }
+            ],
+            cloudApiUrl: (typeof API_URL !== 'undefined' && API_URL !== "PASTE_APPS_SCRIPT_URL") ? API_URL : ""
+        };
+
+        // Application State Initializations
+        let appState = JSON.parse(localStorage.getItem('zariff_legacy_data')) || DEFAULT_STATE;
+        
+        // Auto-override cloudApiUrl jika API_URL diset dalam kod
+        if (typeof API_URL !== 'undefined' && API_URL !== "PASTE_APPS_SCRIPT_URL" && API_URL.trim() !== "") {
+            appState.cloudApiUrl = API_URL.trim();
+        }
+
+        let isAdminLoggedIn = sessionStorage.getItem('zariff_admin_logged') === 'true';
+        let currentActiveBannerIndex = 0;
+        let currentSelectedAppForInquiry = null;
+        let activeTagFilter = null;
+        let pendingDeleteCallback = null;
+        let isCloudConnected = false;
+
+        function formatImageUrl(url) {
+            if (!url) return '';
+            url = url.trim();
+            const driveRegex = /(?:https?:\/\/)?(?:drive\.google\.com\/(?:file\/d\/|open\?id=)|lh3\.googleusercontent\.com\/d\/)([a-zA-Z0-9_-]+)/;
+            const match = url.match(driveRegex);
+            if (match && match[1]) {
+                return `https://lh3.googleusercontent.com/d/${match[1]}`;
+            }
+            return url;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initApp();
+        });
+
+        function initApp() {
+            const isDark = localStorage.getItem('theme') === 'dark' || 
+                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                document.getElementById('themeIcon').className = 'fa-solid fa-sun text-amber-400 text-lg';
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('themeIcon').className = 'fa-solid fa-moon text-gray-600 text-lg';
+            }
+
+            applyThemePalette(appState.brand.theme || 'emerald');
+            document.getElementById('footerYear').textContent = new Date().getFullYear();
+            
+            applySiteBrandSettings();
+            renderHeroBanner();
+            renderCategoriesFilterDropdown();
+            renderAppsGrid();
+
+            updateSyncStatusUI();
+            if (appState.cloudApiUrl) {
+                syncDataFromCloud(true);
+            }
+        }
+
+        function applyThemePalette(themeName) {
+            document.documentElement.setAttribute('data-theme', themeName);
+            appState.brand.theme = themeName;
+            const sel = document.getElementById('settingThemePalette');
+            if (sel) sel.value = themeName;
+            updateLogoTransparentStyling();
+        }
+
+        function previewColorTheme(themeName) {
+            document.documentElement.setAttribute('data-theme', themeName);
+            updateLogoTransparentStyling();
+        }
+
+        function updateLogoTransparentStyling() {
+            const container = document.getElementById('brandLogoContainer');
+            const logoImg = document.getElementById('brandLogoImg');
+            if (logoImg && !logoImg.classList.contains('hidden')) {
+                container.classList.add('logo-img-transparent');
+                container.classList.remove('bg-theme-100', 'dark:bg-theme-950', 'border', 'border-theme-300', 'dark:border-theme-800');
+            } else if (container) {
+                container.classList.remove('logo-img-transparent');
+                container.classList.add('bg-theme-100', 'dark:bg-theme-950', 'border', 'border-theme-300', 'dark:border-theme-800');
+            }
+        }
+
+        function handleLogoImgError() {
+            const logoText = document.getElementById('brandLogoText');
+            const logoImg = document.getElementById('brandLogoImg');
+            logoImg.classList.add('hidden');
+            logoText.classList.remove('hidden');
+            updateLogoTransparentStyling();
+        }
+
+        function applySiteBrandSettings() {
+            const b = appState.brand;
+            document.getElementById('pageTitle').textContent = `${b.name} - Showcase Aplikasi`;
+            document.getElementById('brandNameHeader').textContent = b.name;
+            document.getElementById('footerBrandName').textContent = b.name;
+            
+            const logoText = document.getElementById('brandLogoText');
+            const logoImg = document.getElementById('brandLogoImg');
+            
+            if (b.logoUrl && b.logoUrl.trim() !== '') {
+                logoImg.src = formatImageUrl(b.logoUrl);
+                logoImg.classList.remove('hidden');
+                logoText.classList.add('hidden');
+            } else {
+                logoText.textContent = (b.letter || 'Z').toUpperCase();
+                logoText.classList.remove('hidden');
+                logoImg.classList.add('hidden');
+            }
+            updateLogoTransparentStyling();
+            document.getElementById('whatsappNumDisplay').textContent = b.whatsapp || 'Belum diset';
+            document.getElementById('emailDisplay').textContent = b.email || 'Belum diset';
+        }
+
+        function saveStateToLocal() {
+            localStorage.setItem('zariff_legacy_data', JSON.stringify(appState));
+            if (appState.cloudApiUrl) {
+                pushDataToCloud();
+            }
+        }
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                icon.className = 'fa-solid fa-moon text-gray-600 text-lg';
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                icon.className = 'fa-solid fa-sun text-amber-400 text-lg';
+            }
+        }
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            
+            const bgClass = type === 'success' ? 'bg-emerald-600 text-white' :
+                            type === 'error' ? 'bg-rose-600 text-white' : 'bg-gray-800 text-white';
+            const iconClass = type === 'success' ? 'fa-circle-check' :
+                             type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-info';
+            toast.className = `${bgClass} px-4 py-3 rounded-xl shadow-lg flex items-center gap-2.5 text-xs font-medium animate-toast pointer-events-auto max-w-sm`;
+            toast.innerHTML = `<i class="fa-solid ${iconClass} text-base"></i><span>${message}</span>`;
+            
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function askDeleteConfirmation(message, onExecute) {
+            document.getElementById('confirmDeleteMessage').textContent = message || 'Adakah anda pasti mahu memadam item ini?';
+            pendingDeleteCallback = onExecute;
+            const execBtn = document.getElementById('confirmDeleteExecuteBtn');
+            execBtn.onclick = function() {
+                if (pendingDeleteCallback) {
+                    pendingDeleteCallback();
+                    pendingDeleteCallback = null;
+                }
+                closeModal('confirmDeleteModal');
+            };
+            openModal('confirmDeleteModal');
+        }
+
+        function renderHeroBanner() {
+            if (!appState.banners || appState.banners.length === 0) {
+                appState.banners = DEFAULT_STATE.banners;
+            }
+            if (currentActiveBannerIndex >= appState.banners.length) {
+                currentActiveBannerIndex = 0;
+            }
+            const banner = appState.banners[currentActiveBannerIndex] || appState.banners[0];
+            document.getElementById('bannerBadgeText').textContent = banner.badge || 'Showcase Aplikasi';
+            document.getElementById('bannerTitle').textContent = banner.title || 'Inovasi Digital';
+            document.getElementById('bannerSubtitle').textContent = banner.subtitle || '';
+            
+            const bgContainer = document.getElementById('bannerBgContainer');
+            const bgImg = document.getElementById('bannerBgImg');
+            const formattedImg = formatImageUrl(banner.imgUrl);
+            if (formattedImg && formattedImg.trim() !== '') {
+                bgImg.src = formattedImg;
+                bgContainer.classList.remove('hidden');
+            } else {
+                bgContainer.classList.add('hidden');
+            }
+
+            const controls = document.getElementById('bannerControls');
+            if (appState.banners.length > 1) {
+                controls.innerHTML = appState.banners.map((_, idx) => `
+                    <button onclick="setBannerIndex(${idx})" aria-label="Banner ${idx + 1}" class="w-2.5 h-2.5 rounded-full transition-all ${idx === currentActiveBannerIndex ? 'bg-theme-500 w-6' : 'bg-gray-300 dark:bg-gray-700'}"></button>
+                `).join('');
+                controls.classList.remove('hidden');
+            } else {
+                controls.classList.add('hidden');
+            }
+        }
+
+        function setBannerIndex(idx) {
+            currentActiveBannerIndex = idx;
+            renderHeroBanner();
+        }
+
+        function renderCategoriesFilterDropdown() {
+            const select = document.getElementById('categoryFilter');
+            const formCatSelect = document.getElementById('formCategory');
+            const optionsHtml = appState.categories.map(cat => `<option value="${cat}">${cat}</option>`).join('');
+            select.innerHTML = `<option value="ALL">Semua Kategori</option>` + optionsHtml;
+            if (formCatSelect) {
+                formCatSelect.innerHTML = optionsHtml;
+            }
+        }
+
+        function handleSearchFilter() {
+            renderAppsGrid();
+        }
+
+        function filterByTag(tagName) {
+            activeTagFilter = tagName;
+            document.getElementById('activeTagText').textContent = tagName;
+            document.getElementById('activeTagFilterContainer').classList.remove('hidden');
+            renderAppsGrid();
+        }
+
+        function clearTagFilter() {
+            activeTagFilter = null;
+            document.getElementById('activeTagFilterContainer').classList.add('hidden');
+            renderAppsGrid();
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            renderAppsGrid();
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('categoryFilter').value = 'ALL';
+            document.getElementById('sortOption').value = 'newest';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            clearTagFilter();
+        }
+
+        function renderAppsGrid() {
+            const query = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+            const category = document.getElementById('categoryFilter').value;
+            const sort = document.getElementById('sortOption').value;
+
+            if (query.length > 0) {
+                document.getElementById('clearSearchBtn').classList.remove('hidden');
+            } else {
+                document.getElementById('clearSearchBtn').classList.add('hidden');
+            }
+
+            let filtered = appState.apps.filter(app => {
+                const appTagsStr = Array.isArray(app.tags) ? app.tags.join(' ') : (app.tags || '');
+                const matchQuery = !query || 
+                    (app.name && app.name.toLowerCase().includes(query)) ||
+                    (app.shortDesc && app.shortDesc.toLowerCase().includes(query)) ||
+                    (app.fullDesc && app.fullDesc.toLowerCase().includes(query)) ||
+                    (app.category && app.category.toLowerCase().includes(query)) ||
+                    appTagsStr.toLowerCase().includes(query);
+                
+                const matchCategory = category === 'ALL' || app.category === category;
+                const matchTag = !activeTagFilter || (Array.isArray(app.tags) && app.tags.includes(activeTagFilter));
+                return matchQuery && matchCategory && matchTag;
+            });
+
+            filtered.sort((a, b) => {
+                if (sort === 'newest') return new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
+                if (sort === 'oldest') return new Date(a.createdAt || 0) - new Date(b.createdAt || 0);
+                if (sort === 'name_asc') return (a.name || '').localeCompare(b.name || '');
+                if (sort === 'name_desc') return (b.name || '').localeCompare(a.name || '');
+                return 0;
+            });
+
+            const grid = document.getElementById('appsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const appsCountLabel = document.getElementById('appsCountLabel');
+            
+            appsCountLabel.textContent = `Menunjukkan ${filtered.length} daripada ${appState.apps.length} aplikasi`;
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(app => {
+                const appImgUrl = formatImageUrl(app.imgUrl);
+                const imgFallback = `https://placehold.co/600x350/162238/ffffff?text=${encodeURIComponent(app.name)}`;
+                const isFeatured = !!app.featured;
+                
+                const tagsList = Array.isArray(app.tags) ? app.tags : (app.tags ? app.tags.split(',').map(t=>t.trim()) : []);
+                const tagsHtml = tagsList.map(t => `
+                    <button onclick="event.stopPropagation(); filterByTag('${t}')" class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 hover:bg-theme-100 text-gray-600 hover:text-theme-800 dark:bg-gray-800 dark:hover:bg-theme-900/50 dark:text-gray-300 dark:hover:text-theme-300 transition">
+                        #${t}
+                    </button>
+                `).join('');
+
+                return `
+                <div class="group bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800/80 shadow-sm hover:shadow-xl hover:border-theme-500/50 dark:hover:border-theme-500/50 transition-all duration-300 flex flex-col overflow-hidden relative">
+                    ${isFeatured ? `
+                    <div class="absolute top-3 left-3 z-10 bg-amber-500 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i> Utama
+                    </div>
+                    ` : ''}
+                    <div class="relative h-44 bg-gray-100 dark:bg-gray-800 overflow-hidden cursor-pointer" onclick="openAppDetailModal('${app.id}')">
+                        <img src="${appImgUrl || imgFallback}" alt="${app.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='${imgFallback}';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs text-white font-medium inline-flex items-center gap-1"><i class="fa-solid fa-eye"></i> Lihat Butiran Terperinci</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <span class="px-2.5 py-0.5 text-[11px] font-semibold rounded-md bg-theme-50 dark:bg-theme-950 text-theme-700 dark:text-theme-300 border border-theme-200 dark:border-theme-800">
+                                ${app.category || 'General'}
+                            </span>
+                            <span class="text-xs font-bold ${app.status === 'Percuma' ? 'text-emerald-600 dark:text-emerald-400' : 'text-theme-600 dark:text-theme-400'}">
+                                ${app.status || 'Aktif'}
+                            </span>
+                        </div>
+                        <h3 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-theme-600 dark:group-hover:text-theme-400 transition-colors line-clamp-1 cursor-pointer" onclick="openAppDetailModal('${app.id}')">
+                            ${app.name}
+                        </h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1.5 mb-3 line-clamp-2 leading-relaxed">
+                            ${app.shortDesc || app.fullDesc || 'Tiada penerangan disediakan.'}
+                        </p>
+                        ${tagsHtml ? `<div class="flex flex-wrap gap-1 mb-4">${tagsHtml}</div>` : '<div class="mb-2"></div>'}
+                        <div class="pt-3 border-t border-gray-100 dark:border-gray-800/80 flex items-center justify-between gap-2 mt-auto">
+                            <button onclick="openAppDetailModal('${app.id}')" class="px-3 py-1.5 rounded-lg text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                                Butiran
+                            </button>
+                            <div class="flex items-center gap-1.5">
+                                <button onclick="quickInquireWhatsApp('${app.id}')" class="p-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 hover:bg-emerald-100 dark:hover:bg-emerald-900 transition" title="Tanya WhatsApp">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                                </button>
+                                <a href="${app.appUrl || '#'}" target="_blank" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-white bg-theme-600 hover:bg-theme-700 shadow-sm transition inline-flex items-center gap-1">
+                                    <span>Buka</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function openAppDetailModal(appId) {
+            const app = appState.apps.find(a => a.id === appId);
+            if (!app) return;
+            currentSelectedAppForInquiry = app;
+            document.getElementById('detailAppName').textContent = app.name;
+            document.getElementById('detailAppCategory').textContent = app.category;
+            document.getElementById('detailAppStatus').textContent = app.status || 'Aktif';
+            document.getElementById('detailAppShort').textContent = app.shortDesc || 'Aplikasi Zariff Legacy';
+            document.getElementById('detailAppFull').textContent = app.fullDesc || app.shortDesc || 'Tiada maklumat terperinci.';
+            document.getElementById('detailAppCreated').textContent = app.createdAt || '-';
+            document.getElementById('detailAppUpdated').textContent = app.updatedAt || '-';
+            
+            const tagsList = Array.isArray(app.tags) ? app.tags : (app.tags ? app.tags.split(',').map(t=>t.trim()) : []);
+            const tagsContainer = document.getElementById('detailAppTagsContainer');
+            if (tagsList.length > 0) {
+                tagsContainer.innerHTML = tagsList.map(t => `
+                    <span class="px-2.5 py-1 rounded-lg bg-theme-50 dark:bg-theme-950 text-theme-700 dark:text-theme-300 text-xs font-medium border border-theme-200 dark:border-theme-800">
+                        #${t}
+                    </span>
+                `).join('');
+            } else {
+                tagsContainer.innerHTML = '';
+            }
+
+            document.getElementById('detailOpenAppBtn').href = app.appUrl || '#';
+            document.getElementById('detailAppImg').src = formatImageUrl(app.imgUrl) || `https://placehold.co/800x400/162238/ffffff?text=${encodeURIComponent(app.name)}`;
+            
+            const featBadge = document.getElementById('detailFeaturedBadge');
+            if (app.featured) {
+                featBadge.classList.remove('hidden');
+            } else {
+                featBadge.classList.add('hidden');
+            }
+            openModal('appDetailModal');
+        }
+
+        function openContactModal() {
+            openModal('contactModal');
+        }
+
+        function sendWhatsAppInquiry() {
+            const num = appState.brand.whatsapp || '60123456789';
+            const text = encodeURIComponent(`Salam Developer ${appState.brand.name}, saya berminat untuk bertanyakan maklumat lanjut berkenaan aplikasi anda.`);
+            window.open(`https://wa.me/${num}?text=${text}`, '_blank');
+        }
+
+        function quickInquireWhatsApp(appId) {
+            const app = appState.apps.find(a => a.id === appId);
+            if (!app) return;
+            const num = appState.brand.whatsapp || '60123456789';
+            const text = encodeURIComponent(`Salam Developer ${appState.brand.name}, saya berminat dengan aplikasi *${app.name}* (${app.status || ''}). Boleh berikan maklumat pendaftaran/pembelian?`);
+            window.open(`https://wa.me/${num}?text=${text}`, '_blank');
+        }
+
+        function contactAppInquiry() {
+            if (currentSelectedAppForInquiry) {
+                quickInquireWhatsApp(currentSelectedAppForInquiry.id);
+            } else {
+                sendWhatsAppInquiry();
+            }
+        }
+
+        function sendEmailInquiry() {
+            const email = appState.brand.email || '';
+            if (!email) {
+                showToast('E-mel belum ditetapkan oleh pentadbir.', 'error');
+                return;
+            }
+            window.location.href = `mailto:${email}?subject=Pertanyaan%20Aplikasi%20${encodeURIComponent(appState.brand.name)}`;
+        }
+
+        function handleAdminTrigger() {
+            if (isAdminLoggedIn) {
+                openAdminDashboard();
+            } else {
+                document.getElementById('adminPinInput').value = '';
+                openModal('adminLoginModal');
+            }
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const inputPin = document.getElementById('adminPinInput').value.trim();
+            const targetPin = appState.brand.pin || '1234';
+            if (inputPin === targetPin) {
+                isAdminLoggedIn = true;
+                sessionStorage.setItem('zariff_admin_logged', 'true');
+                closeModal('adminLoginModal');
+                openAdminDashboard();
+                showToast('Log masuk Pentadbir berjaya!', 'success');
+            } else {
+                showToast('PIN Admin salah. Sila cuba lagi.', 'error');
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            sessionStorage.removeItem('zariff_admin_logged');
+            closeModal('adminDashboardModal');
+            showToast('Anda telah log keluar.', 'info');
+        }
+
+        function openAdminDashboard() {
+            renderAdminAppsTable();
+            renderAdminCategoriesList();
+            renderAdminBannersList();
+            populateSiteSettingsForm();
+            document.getElementById('apiUrlInput').value = appState.cloudApiUrl || '';
+            updateSyncStatusUI();
+            openModal('adminDashboardModal');
+        }
+
+        function switchAdminTab(tabName) {
+            const tabs = ['manage', 'categories', 'banners', 'siteSettings', 'settings'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
+                const content = document.getElementById(`tab${t.charAt(0).toUpperCase() + t.slice(1)}Content`);
+                if (t === tabName) {
+                    btn.className = 'px-3 py-2 text-xs font-semibold border-b-2 border-theme-500 text-theme-600 dark:text-theme-400';
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = 'px-3 py-2 text-xs font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300';
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        function renderAdminAppsTable() {
+            const tbody = document.getElementById('adminAppsTableBody');
+            document.getElementById('adminTotalCount').textContent = appState.apps.length;
+            if (appState.apps.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="p-4 text-center text-gray-400">Tiada aplikasi direkodkan.</td></tr>`;
+                return;
+            }
+            tbody.innerHTML = appState.apps.map(app => {
+                const tagPills = Array.isArray(app.tags) ? app.tags.map(t=>`<span class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-[10px]">#${t}</span>`).join(' ') : '-';
+                return `
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/30 transition">
+                    <td class="p-3">
+                        <div class="font-bold text-gray-900 dark:text-white">${app.name}</div>
+                        <div class="text-[10px] text-gray-400 line-clamp-1">${app.appUrl || ''}</div>
+                    </td>
+                    <td class="p-3">
+                        <span class="px-2 py-0.5 text-[10px] rounded bg-gray-100 dark:bg-gray-800">${app.category}</span>
+                    </td>
+                    <td class="p-3">
+                        <div class="flex flex-wrap gap-1">${tagPills}</div>
+                    </td>
+                    <td class="p-3 font-semibold text-theme-600 dark:text-theme-400">${app.status || '-'}</td>
+                    <td class="p-3">
+                        ${app.featured ? '<i class="fa-solid fa-star text-amber-500"></i>' : '<span class="text-gray-300">-</span>'}
+                    </td>
+                    <td class="p-3 text-right space-x-1">
+                        <button onclick="editAppForm('${app.id}')" class="p-1.5 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/50 rounded" title="Edit App"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button onclick="deleteApp('${app.id}')" class="p-1.5 text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/50 rounded" title="Padam App"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                `;
+            }).join('');
+        }
+
+        function openAddNewForm() {
+            document.getElementById('formTabTitle').textContent = 'Tambah Aplikasi Baharu';
+            document.getElementById('formAppId').value = '';
+            document.getElementById('appForm').reset();
+            document.getElementById('appFormContainer').classList.remove('hidden');
+        }
+
+        function closeAppForm() {
+            document.getElementById('appFormContainer').classList.add('hidden');
+        }
+
+        function editAppForm(appId) {
+            const app = appState.apps.find(a => a.id === appId);
+            if (!app) return;
+            document.getElementById('formTabTitle').textContent = 'Kemas Kini Aplikasi';
+            document.getElementById('formAppId').value = app.id;
+            document.getElementById('formAppName').value = app.name || '';
+            document.getElementById('formCategory').value = app.category || appState.categories[0];
+            document.getElementById('formStatus').value = app.status || '';
+            document.getElementById('formAppUrl').value = app.appUrl || '';
+            document.getElementById('formTags').value = Array.isArray(app.tags) ? app.tags.join(', ') : (app.tags || '');
+            document.getElementById('formImgUrl').value = app.imgUrl || '';
+            document.getElementById('formShortDesc').value = app.shortDesc || '';
+            document.getElementById('formFullDesc').value = app.fullDesc || '';
+            document.getElementById('formFeatured').checked = !!app.featured;
+            document.getElementById('appFormContainer').classList.remove('hidden');
+        }
+
+        function handleAppFormSubmit(e) {
+            e.preventDefault();
+            const appId = document.getElementById('formAppId').value;
+            const now = new Date().toISOString().split('T')[0];
+            
+            const rawTags = document.getElementById('formTags').value;
+            const parsedTags = rawTags.split(',')
+                .map(t => t.trim().replace(/^#/, ''))
+                .filter(t => t.length > 0);
+
+            const appData = {
+                id: appId || `app-${Date.now()}`,
+                name: document.getElementById('formAppName').value.trim(),
+                category: document.getElementById('formCategory').value,
+                status: document.getElementById('formStatus').value.trim() || 'Aktif',
+                appUrl: document.getElementById('formAppUrl').value.trim(),
+                tags: parsedTags,
+                imgUrl: document.getElementById('formImgUrl').value.trim(),
+                shortDesc: document.getElementById('formShortDesc').value.trim(),
+                fullDesc: document.getElementById('formFullDesc').value.trim(),
+                featured: document.getElementById('formFeatured').checked,
+                updatedAt: now
+            };
+
+            if (appId) {
+                const idx = appState.apps.findIndex(a => a.id === appId);
+                if (idx !== -1) {
+                    appData.createdAt = appState.apps[idx].createdAt || now;
+                    appState.apps[idx] = appData;
+                    showToast('Aplikasi berjaya dikemas kini!', 'success');
+                }
+            } else {
+                appData.createdAt = now;
+                appState.apps.unshift(appData);
+                showToast('Aplikasi baharu berjaya ditambah!', 'success');
+            }
+
+            saveStateToLocal();
+            renderAdminAppsTable();
+            renderAppsGrid();
+            closeAppForm();
+        }
+
+        function deleteApp(appId) {
+            const app = appState.apps.find(a => a.id === appId);
+            const appName = app ? app.name : 'aplikasi ini';
+            askDeleteConfirmation(`Adakah anda pasti mahu memadam aplikasi "${appName}"?`, () => {
+                appState.apps = appState.apps.filter(a => a.id !== appId);
+                saveStateToLocal();
+                renderAdminAppsTable();
+                renderAppsGrid();
+                showToast('Aplikasi telah dipadam.', 'info');
+            });
+        }
+
+        function renderAdminCategoriesList() {
+            const container = document.getElementById('categoriesListContainer');
+            if (appState.categories.length === 0) {
+                container.innerHTML = '<p class="text-xs text-gray-400">Tiada kategori.</p>';
+                return;
+            }
+            container.innerHTML = appState.categories.map(cat => `
+                <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700/80">
+                    <span class="text-xs font-bold text-gray-800 dark:text-gray-200">${cat}</span>
+                    <div class="flex items-center gap-1">
+                        <button onclick="openEditCategoryModal('${cat}')" class="px-2.5 py-1 text-[11px] font-semibold text-blue-600 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 rounded-lg transition">
+                            <i class="fa-solid fa-pen mr-1"></i> Edit
+                        </button>
+                        <button onclick="handleDeleteCategory('${cat}')" class="px-2.5 py-1 text-[11px] font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/50 hover:bg-rose-100 rounded-lg transition">
+                            <i class="fa-solid fa-trash mr-1"></i> Padam
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function handleAddCategory(e) {
+            e.preventDefault();
+            const input = document.getElementById('newCategoryInput');
+            const val = input.value.trim();
+            if (val && !appState.categories.includes(val)) {
+                appState.categories.push(val);
+                saveStateToLocal();
+                renderCategoriesFilterDropdown();
+                renderAdminCategoriesList();
+                input.value = '';
+                showToast('Kategori baharu ditambah!', 'success');
+            }
+        }
+
+        function openEditCategoryModal(oldName) {
+            document.getElementById('editCategoryOldName').value = oldName;
+            document.getElementById('editCategoryNewName').value = oldName;
+            openModal('editCategoryModal');
+        }
+
+        function handleSaveEditedCategory(e) {
+            e.preventDefault();
+            const oldName = document.getElementById('editCategoryOldName').value;
+            const newName = document.getElementById('editCategoryNewName').value.trim();
+            if (!newName) return;
+            const idx = appState.categories.indexOf(oldName);
+            if (idx !== -1) {
+                appState.categories[idx] = newName;
+                appState.apps.forEach(app => {
+                    if (app.category === oldName) {
+                        app.category = newName;
+                    }
+                });
+                saveStateToLocal();
+                renderCategoriesFilterDropdown();
+                renderAdminCategoriesList();
+                renderAdminAppsTable();
+                renderAppsGrid();
+                closeModal('editCategoryModal');
+                showToast('Kategori berjaya dikemas kini!', 'success');
+            }
+        }
+
+        function handleDeleteCategory(catName) {
+            askDeleteConfirmation(`Adakah anda pasti mahu memadam kategori "${catName}"?`, () => {
+                appState.categories = appState.categories.filter(c => c !== catName);
+                saveStateToLocal();
+                renderCategoriesFilterDropdown();
+                renderAdminCategoriesList();
+                showToast('Kategori dipadam.', 'info');
+            });
+        }
+
+        function renderAdminBannersList() {
+            const list = document.getElementById('bannersList');
+            list.innerHTML = appState.banners.map((b) => `
+                <div class="p-3 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-between">
+                    <div>
+                        <div class="text-xs font-bold">${b.title}</div>
+                        <div class="text-[10px] text-gray-400">${b.badge || 'Showcase'}</div>
+                    </div>
+                    <div class="flex gap-1">
+                        <button onclick="editBanner('${b.id}')" class="p-1.5 text-blue-600 rounded"><i class="fa-solid fa-pen"></i></button>
+                        ${appState.banners.length > 1 ? `<button onclick="deleteBanner('${b.id}')" class="p-1.5 text-rose-600 rounded"><i class="fa-solid fa-trash"></i></button>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openBannerForm() {
+            document.getElementById('formBannerId').value = '';
+            document.getElementById('bannerForm').reset();
+            document.getElementById('bannerFormContainer').classList.remove('hidden');
+        }
+
+        function closeBannerForm() {
+            document.getElementById('bannerFormContainer').classList.add('hidden');
+        }
+
+        function editBanner(id) {
+            const b = appState.banners.find(x => x.id === id);
+            if (!b) return;
+            document.getElementById('formBannerId').value = b.id;
+            document.getElementById('bannerBadge').value = b.badge || '';
+            document.getElementById('bannerTitleInput').value = b.title || '';
+            document.getElementById('bannerSubtitleInput').value = b.subtitle || '';
+            document.getElementById('bannerImgUrlInput').value = b.imgUrl || '';
+            document.getElementById('bannerFormContainer').classList.remove('hidden');
+        }
+
+        function handleSaveBanner(e) {
+            e.preventDefault();
+            const id = document.getElementById('formBannerId').value;
+            const bData = {
+                id: id || `b-${Date.now()}`,
+                badge: document.getElementById('bannerBadge').value.trim(),
+                title: document.getElementById('bannerTitleInput').value.trim(),
+                subtitle: document.getElementById('bannerSubtitleInput').value.trim(),
+                imgUrl: document.getElementById('bannerImgUrlInput').value.trim()
+            };
+            if (id) {
+                const idx = appState.banners.findIndex(x => x.id === id);
+                if (idx !== -1) appState.banners[idx] = bData;
+            } else {
+                appState.banners.push(bData);
+            }
+            saveStateToLocal();
+            renderHeroBanner();
+            renderAdminBannersList();
+            closeBannerForm();
+            showToast('Banner berjaya disimpan!', 'success');
+        }
+
+        function deleteBanner(id) {
+            if (appState.banners.length <= 1) return;
+            askDeleteConfirmation('Padam banner ini?', () => {
+                appState.banners = appState.banners.filter(x => x.id !== id);
+                saveStateToLocal();
+                renderHeroBanner();
+                renderAdminBannersList();
+                showToast('Banner dipadam.', 'info');
+            });
+        }
+
+        function populateSiteSettingsForm() {
+            const b = appState.brand;
+            document.getElementById('settingBrandName').value = b.name || '';
+            document.getElementById('settingBrandLetter').value = b.letter || 'Z';
+            document.getElementById('settingBrandLogoImg').value = b.logoUrl || '';
+            document.getElementById('settingWhatsapp').value = b.whatsapp || '';
+            document.getElementById('settingEmail').value = b.email || '';
+            document.getElementById('settingAdminPin').value = b.pin || '1234';
+            document.getElementById('settingThemePalette').value = b.theme || 'emerald';
+        }
+
+        function handleSaveSiteSettings(e) {
+            e.preventDefault();
+            const newTheme = document.getElementById('settingThemePalette').value;
+            appState.brand.name = document.getElementById('settingBrandName').value.trim();
+            appState.brand.letter = document.getElementById('settingBrandLetter').value.trim().toUpperCase();
+            appState.brand.logoUrl = document.getElementById('settingBrandLogoImg').value.trim();
+            appState.brand.whatsapp = document.getElementById('settingWhatsapp').value.trim();
+            appState.brand.email = document.getElementById('settingEmail').value.trim();
+            
+            const newPin = document.getElementById('settingAdminPin').value.trim();
+            if (newPin) appState.brand.pin = newPin;
+
+            applyThemePalette(newTheme);
+            saveStateToLocal();
+            applySiteBrandSettings();
+            showToast('Tetapan laman berjaya disimpan!', 'success');
+        }
+
+        function updateSyncStatusUI() {
+            const statusBox = document.getElementById('appscriptStatusBox');
+            const statusIcon = document.getElementById('statusIcon');
+            const statusTitle = document.getElementById('statusTitle');
+            const statusDesc = document.getElementById('statusDesc');
+            const headerBadge = document.getElementById('adminSyncStatusBadge');
+
+            if (appState.cloudApiUrl && isCloudConnected) {
+                statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-900 text-emerald-800 dark:text-emerald-300';
+                statusIcon.className = 'w-3 h-3 rounded-full bg-emerald-500 animate-pulse';
+                statusTitle.textContent = 'Google Apps Script Disambung: YA';
+                statusDesc.textContent = 'Aplikasi anda disinkronkan secara automatik dengan Google Sheets.';
+                
+                headerBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300';
+                headerBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Disambung Ke Cloud`;
+            } else {
+                statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-900 text-rose-800 dark:text-rose-300';
+                statusIcon.className = 'w-3 h-3 rounded-full bg-rose-500';
+                statusTitle.textContent = 'Google Apps Script Disambung: Tidak';
+                statusDesc.textContent = 'Menggunakan penyimpanan lokal browser (Atau URL AppsScript tidak sah).';
+                headerBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300';
+                headerBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-rose-500"></span> Lokal Sahaja`;
+            }
+        }
+
+        function handleSaveApiUrl(e) {
+            e.preventDefault();
+            const url = document.getElementById('apiUrlInput').value.trim();
+            appState.cloudApiUrl = url;
+            saveStateToLocal();
+            syncDataFromCloud();
+        }
+
+        async function syncDataFromCloud(silent = false) {
+            if (!appState.cloudApiUrl || appState.cloudApiUrl === "PASTE_APPS_SCRIPT_URL") {
+                isCloudConnected = false;
+                updateSyncStatusUI();
+                if (!silent) showToast('Tiada URL Apps Script dimasukkan.', 'info');
+                return;
+            }
+            try {
+                const res = await fetch(appState.cloudApiUrl);
+                const json = await res.json();
+                if (json && json.status === 'success' && json.data) {
+                    appState = json.data;
+                    appState.cloudApiUrl = document.getElementById('apiUrlInput').value.trim() || appState.cloudApiUrl;
+                    localStorage.setItem('zariff_legacy_data', JSON.stringify(appState));
+                    isCloudConnected = true;
+                    
+                    applyThemePalette(appState.brand.theme || 'emerald');
+                    applySiteBrandSettings();
+                    renderHeroBanner();
+                    renderCategoriesFilterDropdown();
+                    renderAppsGrid();
+                    updateSyncStatusUI();
+                    if (!silent) showToast('Data cloud berjaya disegerakkan!', 'success');
+                } else {
+                    isCloudConnected = false;
+                    updateSyncStatusUI();
+                    if (!silent) showToast('Format sambungan Apps Script tidak sah.', 'error');
+                }
+            } catch (err) {
+                isCloudConnected = false;
+                updateSyncStatusUI();
+                if (!silent) showToast('Gagal menyambung ke Apps Script.', 'error');
+            }
+        }
+
+        async function pushDataToCloud() {
+            if (!appState.cloudApiUrl || appState.cloudApiUrl === "PASTE_APPS_SCRIPT_URL") return;
+            try {
+                await fetch(appState.cloudApiUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(appState)
+                });
+                isCloudConnected = true;
+                updateSyncStatusUI();
+            } catch (err) {
+                isCloudConnected = false;
+                updateSyncStatusUI();
+            }
+        }
+
+        function exportDataJSON() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appState, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `zariff_legacy_backup_${new Date().toISOString().split('T')[0]}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+            showToast('Backup JSON berjaya dimuat turun.', 'success');
+        }
+
+        function importDataJSON(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const imported = JSON.parse(e.target.result);
+                    if (imported && imported.brand && imported.apps) {
+                        appState = imported;
+                        saveStateToLocal();
+                        initApp();
+                        showToast('Backup JSON berjaya diimport!', 'success');
+                    } else {
+                        showToast('Fail JSON tidak mengandungi skema Zariff Legacy.', 'error');
+                    }
+                } catch (err) {
+                    showToast('Fail JSON rosak atau tidak sah.', 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function confirmResetDemoData() {
+            askDeleteConfirmation('Sifar data ke tetapan asal demo?', () => {
+                appState = JSON.parse(JSON.stringify(DEFAULT_STATE));
+                localStorage.removeItem('zariff_legacy_data');
+                initApp();
+                showToast('Aplikasi telah di-reset ke data demo.', 'info');
+            });
+        }
+    </script>
+</body>
+</html>
