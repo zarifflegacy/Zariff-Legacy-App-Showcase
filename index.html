@@ -193,26 +193,26 @@
     <!-- MAIN CONTENT AREA -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Hero Banner Section -->
-        <section id="heroBannerSection" class="mb-10 text-center flex flex-col items-center justify-center bg-gradient-to-r from-theme-900/10 via-theme-900/5 to-transparent p-6 sm:p-12 rounded-3xl border border-theme-500/20 relative overflow-hidden shadow-sm transition-all min-h-[220px]">
+        <section id="heroBannerSection" class="mb-10 text-center flex flex-col items-center justify-center bg-gradient-to-br from-theme-900 via-theme-800 to-gray-900 text-white p-6 sm:p-12 rounded-3xl border border-theme-700/50 relative overflow-hidden shadow-xl transition-all min-h-[240px]">
             <div id="bannerBgContainer" class="absolute inset-0 hidden">
                 <img id="bannerBgImg" src="" alt="Banner Background" class="w-full h-full object-cover" onerror="this.parentElement.classList.add('hidden')">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/80 to-gray-950/40"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/80 to-gray-950/50"></div>
             </div>
             <div id="bannerContentContainer" class="max-w-3xl mx-auto relative z-10 flex flex-col items-center text-center">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-theme-100 text-theme-800 dark:bg-theme-950/90 dark:text-theme-300 mb-4 border border-theme-300 dark:border-theme-700 backdrop-blur-sm">
-                    <span class="w-2 h-2 rounded-full bg-theme-500 animate-pulse"></span>
-                    <span id="bannerBadgeText">Showcase & Katalog Rasmi</span>
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-white/20 dark:bg-theme-950/90 text-white dark:text-theme-200 mb-4 border border-white/30 dark:border-theme-700 backdrop-blur-md shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span id="bannerBadgeText" class="tracking-wide">Showcase & Katalog Rasmi</span>
                 </div>
-                <h2 id="bannerTitle" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight">
+                <h2 id="bannerTitle" class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white dark:text-white leading-tight drop-shadow-md">
                     Inovasi Digital & Solusi Aplikasi Mudah
                 </h2>
-                <p id="bannerSubtitle" class="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+                <p id="bannerSubtitle" class="mt-4 text-base sm:text-lg text-theme-100 dark:text-gray-200 leading-relaxed max-w-2xl font-normal drop-shadow-sm">
                     Terokai aplikasi yang dibangunkan untuk membantu kerja menjadi lebih mudah dan produktif.
                 </p>
             </div>
             <div id="bannerControls" class="mt-6 flex items-center justify-center gap-2 relative z-10"></div>
-            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-theme-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -left-10 -top-10 w-64 h-64 bg-theme-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-theme-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-10 -top-10 w-64 h-64 bg-theme-400/20 rounded-full blur-3xl pointer-events-none"></div>
         </section>
 
         <!-- Controls: Search, Filter Category, Sort -->
@@ -272,7 +272,7 @@
         </div>
     </main>
 
-    <!-- FOOTER (Contains Hidden Admin Trigger on Copyright Text) -->
+    <!-- FOOTER -->
     <footer class="mt-auto border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 transition-colors py-6 select-none">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div onclick="handleAdminTrigger()" class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 inline-block py-1 px-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 transition" title="Akses Pentadbir">
@@ -282,31 +282,31 @@
     </footer>
 
     <!-- APP DETAIL MODAL -->
-    <div id="appDetailModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-2xl w-full border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden transform transition-all my-8">
-            <div class="relative h-48 sm:h-56 bg-gray-100 dark:bg-gray-800 overflow-hidden flex items-center justify-center">
+    <div id="appDetailModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-2xl w-full border border-gray-200 dark:border-gray-800 shadow-2xl flex flex-col max-h-[90vh] overflow-hidden transform transition-all my-auto">
+            <div class="relative h-48 sm:h-56 bg-gray-100 dark:bg-gray-800 shrink-0 overflow-hidden flex items-center justify-center">
                 <img id="detailAppImg" src="" alt="App Detail Image" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x400/1e293b/ffffff?text=Zariff+Legacy+App';">
-                <button onclick="closeModal('appDetailModal')" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white hover:bg-black/70 flex items-center justify-center transition">
-                    <i class="fa-solid fa-xmark"></i>
+                <button onclick="closeModal('appDetailModal')" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black/80 flex items-center justify-center transition shadow-md z-10" title="Tutup">
+                    <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
                 <div id="detailFeaturedBadge" class="hidden absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">
                     <i class="fa-solid fa-star mr-1"></i> Utama
                 </div>
             </div>
-            <div class="p-6">
-                <div class="flex items-start justify-between gap-4 mb-3">
+            <div class="p-6 overflow-y-auto flex-grow space-y-4">
+                <div class="flex items-start justify-between gap-4">
                     <div>
                         <span id="detailAppCategory" class="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-md bg-theme-50 text-theme-700 dark:bg-theme-950 dark:text-theme-300 border border-theme-200 dark:border-theme-800 mb-2"></span>
                         <h3 id="detailAppName" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
                     </div>
                     <span id="detailAppStatus" class="shrink-0 px-3 py-1 text-xs font-bold rounded-full"></span>
                 </div>
-                <div id="detailAppTagsContainer" class="flex flex-wrap gap-1.5 mb-3"></div>
-                <p id="detailAppShort" class="text-sm text-gray-600 dark:text-gray-300 italic mb-4 border-l-2 border-theme-500 pl-3 py-0.5"></p>
-                <div class="space-y-4 mb-6">
+                <div id="detailAppTagsContainer" class="flex flex-wrap gap-1.5"></div>
+                <p id="detailAppShort" class="text-sm text-gray-600 dark:text-gray-300 italic border-l-2 border-theme-500 pl-3 py-0.5"></p>
+                <div class="space-y-4">
                     <div>
-                        <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Penerangan Lengkap & Butiran Fail</h4>
-                        <p id="detailAppFull" class="text-sm text-gray-700 dark:text-gray-200 whitespace-pre-line leading-relaxed bg-gray-50 dark:bg-gray-800/50 p-3.5 rounded-xl border border-gray-100 dark:border-gray-800/80"></p>
+                        <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Penerangan Lengkap & Butiran Fail</h4>
+                        <p id="detailAppFull" class="text-sm text-gray-700 dark:text-gray-200 whitespace-pre-line leading-relaxed bg-gray-50 dark:bg-gray-800/50 p-4 rounded-xl border border-gray-100 dark:border-gray-800/80"></p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-3">
                         <div>
@@ -319,7 +319,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <div class="flex flex-col sm:flex-row gap-3 pt-3">
                     <a id="detailOpenAppBtn" href="#" target="_blank" class="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-theme-600 hover:bg-theme-700 text-white font-medium shadow-md transition text-sm">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Aplikasi / Muat Turun Fail
                     </a>
@@ -327,11 +327,16 @@
                         <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Tentang App Ini
                     </button>
                 </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 dark:border-gray-800/80 text-center">
+                    <button onclick="closeModal('appDetailModal')" class="w-full sm:w-auto px-6 py-2 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-semibold transition">
+                        <i class="fa-solid fa-xmark mr-1"></i> Tutup Window / Modal
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- CONTACT DEVELOPER MODAL -->
+    <!-- CONTACT DEVELOPER MODAL (Khusus WhatsApp) -->
     <div id="contactModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-md w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 relative">
             <button onclick="closeModal('contactModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
@@ -339,10 +344,10 @@
             </button>
             <div class="text-center mb-6">
                 <div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-3 text-xl">
-                    <i class="fa-solid fa-headset"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 dark:text-white">Hubungi Developer</h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Sila pilih saluran pertanyaan atau pembelian di bawah.</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Sila hubungi kami melalui WhatsApp di bawah.</p>
             </div>
             <div class="space-y-3">
                 <button id="whatsappContactLink" onclick="sendWhatsAppInquiry()" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-medium shadow-md transition">
@@ -351,16 +356,6 @@
                         <div class="text-left">
                             <div class="text-sm font-bold">WhatsApp Direct</div>
                             <div class="text-xs text-emerald-100" id="whatsappNumDisplay">Nombor belum diset</div>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                </button>
-                <button id="emailContactLink" onclick="sendEmailInquiry()" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-medium transition">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-regular fa-envelope text-2xl text-theme-500"></i>
-                        <div class="text-left">
-                            <div class="text-sm font-bold">E-mel Rasmi</div>
-                            <div class="text-xs text-gray-500 dark:text-gray-400" id="emailDisplay">E-mel belum diset</div>
                         </div>
                     </div>
                     <i class="fa-solid fa-chevron-right text-xs"></i>
@@ -417,7 +412,6 @@
                     </button>
                 </div>
             </div>
-
             <div class="flex flex-wrap border-b border-gray-200 dark:border-gray-800 bg-gray-100/50 dark:bg-gray-950/50 px-4 sm:px-6 gap-1 sm:gap-2 pt-2 shrink-0">
                 <button id="tabBtnManage" onclick="switchAdminTab('manage')" class="px-3 py-2 text-xs font-semibold border-b-2 border-theme-500 text-theme-600 dark:text-theme-400">
                     <i class="fa-solid fa-list-check mr-1"></i> Aplikasi
@@ -435,7 +429,6 @@
                     <i class="fa-solid fa-code mr-1"></i> Backend & Sync
                 </button>
             </div>
-
             <div class="p-6 overflow-y-auto flex-grow">
                 <!-- TAB 1: MANAGE APPS -->
                 <div id="tabManageContent" class="space-y-6">
@@ -492,7 +485,6 @@
                             <div>
                                 <label for="formTags" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Tagging Produk (Pisahkan dengan koma)</label>
                                 <input type="text" id="formTags" placeholder="Cth: POS, Kasir, Inventori, Business, Web App" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
-                                <p class="text-[10px] text-gray-400 mt-1">Tagging ini membolehkan pengguna mencari produk dengan pantas melalui carian atau tag pautan.</p>
                             </div>
                             <div>
                                 <label for="formImgUrl" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Pautan Gambar Preview (Menyokong Google Drive / URL Direct)</label>
@@ -607,17 +599,12 @@
                                 <input type="text" id="settingBrandLogoImg" placeholder="https://drive.google.com/..." class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs">
                             </div>
                         </div>
-                        <p class="text-[10px] text-gray-400">Pautan fail logo imej transparan (PNG) dikekalkan tanpa warna latar belakang.</p>
                         <div class="pt-2 border-t border-gray-200 dark:border-gray-800">
-                            <h5 class="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">Maklumat Perhubungan Developer</h5>
+                            <h5 class="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">Perhubungan Developer (WhatsApp)</h5>
                             <div class="space-y-3">
                                 <div>
                                     <label for="settingWhatsapp" class="block text-xs font-semibold mb-1">Nombor WhatsApp (Format Antarabangsa tanpa +)</label>
                                     <input type="text" id="settingWhatsapp" placeholder="60123456789" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
-                                </div>
-                                <div>
-                                    <label for="settingEmail" class="block text-xs font-semibold mb-1">E-mel Rasmi Developer</label>
-                                    <input type="email" id="settingEmail" placeholder="zariff@example.com" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
                                 </div>
                             </div>
                         </div>
@@ -634,7 +621,7 @@
                     </form>
                 </div>
 
-                <!-- TAB 5: BACKEND, APPSCRIPT SYNC & STATUS CHECK -->
+                <!-- TAB 5: BACKEND & SYNC -->
                 <div id="tabSettingsContent" class="hidden space-y-6">
                     <div>
                         <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Google Apps Script Integration (Cloud Sync)</h4>
@@ -734,10 +721,9 @@
     <!-- JAVASCRIPT APPLICATION LOGIC -->
     <script>
         /* ==========================================================================
-           KONFIGURASI GOOGLE APPS SCRIPT URL
-           Tampal Web App URL anda di dalam pengenalan pemalar (constant) di bawah:
+           KONFIGURASI: Sila tampal URL Google Apps Script anda di bawah
            ========================================================================== */
-        const API_URL = " https://script.google.com/macros/s/AKfycbwu9ZAay18x7XG0EAQLWvgZYtWkq23kM_iSHNvcmsud6BHSDsIpckseUbLnz31LGrWgkA/exec";
+        const API_URL = " https://script.google.com/macros/s/AKfycbwVxyr2E50jD_gJDh1ippaaZZwLa_McMxd-Zp8Ontevwwt3RbrrOmGfOkLFvyqz0B1_/exec";
 
         // Default Initial Dataset Fallback
         const DEFAULT_STATE = {
@@ -746,7 +732,6 @@
                 letter: "Z",
                 logoUrl: "",
                 whatsapp: "60123456789",
-                email: "zariff.legacy@example.com",
                 pin: "1234",
                 theme: "emerald"
             },
@@ -799,10 +784,8 @@
             cloudApiUrl: (typeof API_URL !== 'undefined' && API_URL !== "PASTE_APPS_SCRIPT_URL") ? API_URL : ""
         };
 
-        // Application State Initializations
         let appState = JSON.parse(localStorage.getItem('zariff_legacy_data')) || DEFAULT_STATE;
         
-        // Auto-override cloudApiUrl jika API_URL diset dalam kod
         if (typeof API_URL !== 'undefined' && API_URL !== "PASTE_APPS_SCRIPT_URL" && API_URL.trim() !== "") {
             appState.cloudApiUrl = API_URL.trim();
         }
@@ -847,8 +830,8 @@
             renderHeroBanner();
             renderCategoriesFilterDropdown();
             renderAppsGrid();
-
             updateSyncStatusUI();
+
             if (appState.cloudApiUrl) {
                 syncDataFromCloud(true);
             }
@@ -907,7 +890,6 @@
             }
             updateLogoTransparentStyling();
             document.getElementById('whatsappNumDisplay').textContent = b.whatsapp || 'Belum diset';
-            document.getElementById('emailDisplay').textContent = b.email || 'Belum diset';
         }
 
         function saveStateToLocal() {
@@ -988,7 +970,7 @@
             const controls = document.getElementById('bannerControls');
             if (appState.banners.length > 1) {
                 controls.innerHTML = appState.banners.map((_, idx) => `
-                    <button onclick="setBannerIndex(${idx})" aria-label="Banner ${idx + 1}" class="w-2.5 h-2.5 rounded-full transition-all ${idx === currentActiveBannerIndex ? 'bg-theme-500 w-6' : 'bg-gray-300 dark:bg-gray-700'}"></button>
+                    <button onclick="setBannerIndex(${idx})" aria-label="Banner ${idx + 1}" class="w-2.5 h-2.5 rounded-full transition-all ${idx === currentActiveBannerIndex ? 'bg-white w-6' : 'bg-white/40 dark:bg-gray-700'}"></button>
                 `).join('');
                 controls.classList.remove('hidden');
             } else {
@@ -1080,6 +1062,7 @@
             const appsCountLabel = document.getElementById('appsCountLabel');
             
             appsCountLabel.textContent = `Menunjukkan ${filtered.length} daripada ${appState.apps.length} aplikasi`;
+
             if (filtered.length === 0) {
                 grid.innerHTML = '';
                 emptyState.classList.remove('hidden');
@@ -1188,6 +1171,7 @@
             } else {
                 featBadge.classList.add('hidden');
             }
+
             openModal('appDetailModal');
         }
 
@@ -1215,15 +1199,6 @@
             } else {
                 sendWhatsAppInquiry();
             }
-        }
-
-        function sendEmailInquiry() {
-            const email = appState.brand.email || '';
-            if (!email) {
-                showToast('E-mel belum ditetapkan oleh pentadbir.', 'error');
-                return;
-            }
-            window.location.href = `mailto:${email}?subject=Pertanyaan%20Aplikasi%20${encodeURIComponent(appState.brand.name)}`;
         }
 
         function handleAdminTrigger() {
@@ -1520,12 +1495,14 @@
                 subtitle: document.getElementById('bannerSubtitleInput').value.trim(),
                 imgUrl: document.getElementById('bannerImgUrlInput').value.trim()
             };
+
             if (id) {
                 const idx = appState.banners.findIndex(x => x.id === id);
                 if (idx !== -1) appState.banners[idx] = bData;
             } else {
                 appState.banners.push(bData);
             }
+
             saveStateToLocal();
             renderHeroBanner();
             renderAdminBannersList();
@@ -1550,7 +1527,6 @@
             document.getElementById('settingBrandLetter').value = b.letter || 'Z';
             document.getElementById('settingBrandLogoImg').value = b.logoUrl || '';
             document.getElementById('settingWhatsapp').value = b.whatsapp || '';
-            document.getElementById('settingEmail').value = b.email || '';
             document.getElementById('settingAdminPin').value = b.pin || '1234';
             document.getElementById('settingThemePalette').value = b.theme || 'emerald';
         }
@@ -1562,7 +1538,6 @@
             appState.brand.letter = document.getElementById('settingBrandLetter').value.trim().toUpperCase();
             appState.brand.logoUrl = document.getElementById('settingBrandLogoImg').value.trim();
             appState.brand.whatsapp = document.getElementById('settingWhatsapp').value.trim();
-            appState.brand.email = document.getElementById('settingEmail').value.trim();
             
             const newPin = document.getElementById('settingAdminPin').value.trim();
             if (newPin) appState.brand.pin = newPin;
@@ -1579,7 +1554,7 @@
             const statusTitle = document.getElementById('statusTitle');
             const statusDesc = document.getElementById('statusDesc');
             const headerBadge = document.getElementById('adminSyncStatusBadge');
-
+            
             if (appState.cloudApiUrl && isCloudConnected) {
                 statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-900 text-emerald-800 dark:text-emerald-300';
                 statusIcon.className = 'w-3 h-3 rounded-full bg-emerald-500 animate-pulse';
@@ -1591,10 +1566,11 @@
             } else {
                 statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-900 text-rose-800 dark:text-rose-300';
                 statusIcon.className = 'w-3 h-3 rounded-full bg-rose-500';
-                statusTitle.textContent = 'Google Apps Script Disambung: Tidak';
-                statusDesc.textContent = 'Menggunakan penyimpanan lokal browser (Atau URL AppsScript tidak sah).';
+                statusTitle.textContent = 'Google Apps Script Disambung: TIDAK';
+                statusDesc.textContent = 'Aplikasi kini menggunakan penyimpanan lokal browser sahaja.';
+                
                 headerBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300';
-                headerBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-rose-500"></span> Lokal Sahaja`;
+                headerBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-rose-500"></span> Penyimpanan Lokal`;
             }
         }
 
@@ -1602,25 +1578,31 @@
             e.preventDefault();
             const url = document.getElementById('apiUrlInput').value.trim();
             appState.cloudApiUrl = url;
-            saveStateToLocal();
+            localStorage.setItem('zariff_legacy_data', JSON.stringify(appState));
             syncDataFromCloud();
         }
 
         async function syncDataFromCloud(silent = false) {
-            if (!appState.cloudApiUrl || appState.cloudApiUrl === "PASTE_APPS_SCRIPT_URL") {
+            if (!appState.cloudApiUrl) {
                 isCloudConnected = false;
                 updateSyncStatusUI();
-                if (!silent) showToast('Tiada URL Apps Script dimasukkan.', 'info');
+                if (!silent) showToast('Sila masukkan URL Google Apps Script yang sah.', 'error');
                 return;
             }
             try {
-                const res = await fetch(appState.cloudApiUrl);
-                const json = await res.json();
-                if (json && json.status === 'success' && json.data) {
-                    appState = json.data;
-                    appState.cloudApiUrl = document.getElementById('apiUrlInput').value.trim() || appState.cloudApiUrl;
-                    localStorage.setItem('zariff_legacy_data', JSON.stringify(appState));
+                if (!silent) showToast('Menyambung ke Google Apps Script...', 'info');
+                const response = await fetch(appState.cloudApiUrl + '?action=getData');
+                if (!response.ok) throw new Error('Ralat sambungan pelayan');
+                const result = await response.json();
+                
+                if (result && result.status === 'success' && result.data) {
+                    if (result.data.brand) appState.brand = { ...appState.brand, ...result.data.brand };
+                    if (Array.isArray(result.data.categories)) appState.categories = result.data.categories;
+                    if (Array.isArray(result.data.banners)) appState.banners = result.data.banners;
+                    if (Array.isArray(result.data.apps)) appState.apps = result.data.apps;
+                    
                     isCloudConnected = true;
+                    localStorage.setItem('zariff_legacy_data', JSON.stringify(appState));
                     
                     applyThemePalette(appState.brand.theme || 'emerald');
                     applySiteBrandSettings();
@@ -1628,33 +1610,30 @@
                     renderCategoriesFilterDropdown();
                     renderAppsGrid();
                     updateSyncStatusUI();
-                    if (!silent) showToast('Data cloud berjaya disegerakkan!', 'success');
+                    
+                    if (!silent) showToast('Data berjaya disinkronkan dari Cloud!', 'success');
                 } else {
-                    isCloudConnected = false;
-                    updateSyncStatusUI();
-                    if (!silent) showToast('Format sambungan Apps Script tidak sah.', 'error');
+                    throw new Error('Format data Cloud tidak sah');
                 }
             } catch (err) {
+                console.error('AppsScript Fetch Error:', err);
                 isCloudConnected = false;
                 updateSyncStatusUI();
-                if (!silent) showToast('Gagal menyambung ke Apps Script.', 'error');
+                if (!silent) showToast('Gagal menyambung ke Cloud Apps Script.', 'error');
             }
         }
 
         async function pushDataToCloud() {
-            if (!appState.cloudApiUrl || appState.cloudApiUrl === "PASTE_APPS_SCRIPT_URL") return;
+            if (!appState.cloudApiUrl || !isCloudConnected) return;
             try {
                 await fetch(appState.cloudApiUrl, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(appState)
+                    body: JSON.stringify({ action: 'saveData', data: appState })
                 });
-                isCloudConnected = true;
-                updateSyncStatusUI();
             } catch (err) {
-                isCloudConnected = false;
-                updateSyncStatusUI();
+                console.error('Cloud Push Error:', err);
             }
         }
 
@@ -1666,37 +1645,37 @@
             document.body.appendChild(downloadAnchor);
             downloadAnchor.click();
             downloadAnchor.remove();
-            showToast('Backup JSON berjaya dimuat turun.', 'success');
+            showToast('Backup JSON berjaya dimuat turun!', 'success');
         }
 
-        function importDataJSON(event) {
-            const file = event.target.files[0];
+        function importDataJSON(e) {
+            const file = e.target.files[0];
             if (!file) return;
             const reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function(evt) {
                 try {
-                    const imported = JSON.parse(e.target.result);
-                    if (imported && imported.brand && imported.apps) {
+                    const imported = JSON.parse(evt.target.result);
+                    if (imported && imported.brand && Array.isArray(imported.apps)) {
                         appState = imported;
                         saveStateToLocal();
                         initApp();
                         showToast('Backup JSON berjaya diimport!', 'success');
                     } else {
-                        showToast('Fail JSON tidak mengandungi skema Zariff Legacy.', 'error');
+                        showToast('Format fail JSON tidak sah.', 'error');
                     }
                 } catch (err) {
-                    showToast('Fail JSON rosak atau tidak sah.', 'error');
+                    showToast('Gagal membaca fail JSON.', 'error');
                 }
             };
             reader.readAsText(file);
         }
 
         function confirmResetDemoData() {
-            askDeleteConfirmation('Sifar data ke tetapan asal demo?', () => {
+            askDeleteConfirmation('Adakah anda pasti mahu mereset semua data ke demo asal?', () => {
                 appState = JSON.parse(JSON.stringify(DEFAULT_STATE));
-                localStorage.removeItem('zariff_legacy_data');
+                saveStateToLocal();
                 initApp();
-                showToast('Aplikasi telah di-reset ke data demo.', 'info');
+                showToast('Data direset ke Demo asal.', 'info');
             });
         }
     </script>
