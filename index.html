@@ -43,20 +43,11 @@
     
     <style>
         :root {
-            --color-50: #f0fdf4;
-            --color-100: #dcfce7;
-            --color-200: #bbf7d0;
-            --color-300: #86efac;
-            --color-400: #4ade80;
-            --color-500: #22c55e;
-            --color-600: #16a34a;
-            --color-700: #15803d;
-            --color-800: #166534;
-            --color-900: #14532d;
-            --color-950: #052e16;
+            --color-50: #f0fdf4; --color-100: #dcfce7; --color-200: #bbf7d0; --color-300: #86efac;
+            --color-400: #4ade80; --color-500: #22c55e; --color-600: #16a34a; --color-700: #15803d;
+            --color-800: #166534; --color-900: #14532d; --color-950: #052e16;
             --theme-gradient: linear-gradient(135deg, #16a34a, #10b981);
         }
-        /* Color Theme Presets */
         [data-theme="emerald"] {
             --color-50: #f0fdf4; --color-100: #dcfce7; --color-200: #bbf7d0; --color-300: #86efac;
             --color-400: #4ade80; --color-500: #22c55e; --color-600: #16a34a; --color-700: #15803d;
@@ -115,57 +106,23 @@
             font-family: 'Inter', sans-serif;
             transition: background-color 0.3s, color 0.3s;
         }
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.05);
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: rgba(156, 163, 175, 0.5);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(107, 114, 128, 0.8);
-        }
-        .line-clamp-1 {
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        @keyframes slideIn {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .animate-toast {
-            animation: slideIn 0.3s ease-out forwards;
-        }
-        .theme-bg-gradient {
-            background-image: var(--theme-gradient);
-        }
-        .logo-img-transparent {
-            background-color: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.05); }
+        .dark ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
+        ::-webkit-scrollbar-thumb { background: rgba(156, 163, 175, 0.5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(107, 114, 128, 0.8); }
+        .line-clamp-1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        @keyframes slideIn { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .animate-toast { animation: slideIn 0.3s ease-out forwards; }
+        .theme-bg-gradient { background-image: var(--theme-gradient); }
+        .logo-img-transparent { background-color: transparent !important; border: none !important; box-shadow: none !important; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 min-h-screen flex flex-col antialiased selection:bg-theme-500 selection:text-white">
     <!-- NAVIGATION BAR -->
     <header class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <!-- Brand Logo & Name -->
             <div class="flex items-center space-x-3 cursor-pointer select-none" onclick="resetFilters()">
                 <div id="brandLogoContainer" class="w-10 h-10 rounded-xl bg-theme-100 dark:bg-theme-950 flex items-center justify-center font-bold text-xl overflow-hidden shrink-0 border border-theme-300 dark:border-theme-800 transition-all">
                     <span id="brandLogoText" class="text-theme-600 dark:text-theme-400 font-extrabold">Z</span>
@@ -177,7 +134,6 @@
                     </h1>
                 </div>
             </div>
-            <!-- Header Action Buttons -->
             <div class="flex items-center space-x-2 sm:space-x-3">
                 <button onclick="openContactModal()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition border border-emerald-200 dark:border-emerald-800">
                     <i class="fa-brands fa-whatsapp text-emerald-600 dark:text-emerald-400 text-base"></i>
@@ -192,7 +148,6 @@
 
     <!-- MAIN CONTENT AREA -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- Hero Banner Section -->
         <section id="heroBannerSection" class="mb-10 text-center flex flex-col items-center justify-center bg-gradient-to-br from-theme-900 via-theme-800 to-gray-900 text-white p-6 sm:p-12 rounded-3xl border border-theme-700/50 relative overflow-hidden shadow-xl transition-all min-h-[240px]">
             <div id="bannerBgContainer" class="absolute inset-0 hidden">
                 <img id="bannerBgImg" src="" alt="Banner Background" class="w-full h-full object-cover" onerror="this.parentElement.classList.add('hidden')">
@@ -215,7 +170,7 @@
             <div class="absolute -left-10 -top-10 w-64 h-64 bg-theme-400/20 rounded-full blur-3xl pointer-events-none"></div>
         </section>
 
-        <!-- Controls: Search, Filter Category, Sort -->
+        <!-- Search & Filter Controls -->
         <section id="appsSection" class="mb-8 space-y-4">
             <div class="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
                 <div class="relative flex-grow max-w-lg">
@@ -255,11 +210,8 @@
             </div>
         </section>
 
-        <!-- Apps Cards Grid Container -->
-        <section id="appsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        </section>
-
-        <!-- Empty State Message -->
+        <!-- Apps Grid -->
+        <section id="appsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></section>
         <div id="emptyState" class="hidden py-16 text-center bg-white dark:bg-gray-900 rounded-2xl border border-dashed border-gray-300 dark:border-gray-800 p-8 my-6">
             <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-400 text-2xl">
                 <i class="fa-solid fa-box-open"></i>
@@ -285,8 +237,8 @@
     <div id="appDetailModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
         <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-2xl w-full border border-gray-200 dark:border-gray-800 shadow-2xl flex flex-col max-h-[90vh] overflow-hidden transform transition-all my-auto">
             <div class="relative h-48 sm:h-56 bg-gray-100 dark:bg-gray-800 shrink-0 overflow-hidden flex items-center justify-center">
-                <img id="detailAppImg" src="" alt="App Detail Image" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x400/1e293b/ffffff?text=Zariff+Legacy+App';">
-                <button onclick="closeModal('appDetailModal')" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black/80 flex items-center justify-center transition shadow-md z-10" title="Tutup">
+                <img id="detailAppImg" src="" alt="App Detail Image" class="w-full h-full object-cover">
+                <button onclick="closeModal('appDetailModal')" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black/80 flex items-center justify-center transition shadow-md z-10">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
                 <div id="detailFeaturedBadge" class="hidden absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">
@@ -305,7 +257,7 @@
                 <p id="detailAppShort" class="text-sm text-gray-600 dark:text-gray-300 italic border-l-2 border-theme-500 pl-3 py-0.5"></p>
                 <div class="space-y-4">
                     <div>
-                        <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Penerangan Lengkap & Butiran Fail</h4>
+                        <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Penerangan Lengkap</h4>
                         <p id="detailAppFull" class="text-sm text-gray-700 dark:text-gray-200 whitespace-pre-line leading-relaxed bg-gray-50 dark:bg-gray-800/50 p-4 rounded-xl border border-gray-100 dark:border-gray-800/80"></p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-3">
@@ -327,16 +279,11 @@
                         <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Tentang App Ini
                     </button>
                 </div>
-                <div class="pt-4 mt-2 border-t border-gray-100 dark:border-gray-800/80 text-center">
-                    <button onclick="closeModal('appDetailModal')" class="w-full sm:w-auto px-6 py-2 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-semibold transition">
-                        <i class="fa-solid fa-xmark mr-1"></i> Tutup Window / Modal
-                    </button>
-                </div>
             </div>
         </div>
     </div>
 
-    <!-- CONTACT DEVELOPER MODAL (Khusus WhatsApp) -->
+    <!-- CONTACT MODAL -->
     <div id="contactModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-md w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 relative">
             <button onclick="closeModal('contactModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
@@ -349,21 +296,16 @@
                 <h3 class="text-xl font-bold text-gray-900 dark:text-white">Hubungi Developer</h3>
                 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Sila hubungi kami melalui WhatsApp di bawah.</p>
             </div>
-            <div class="space-y-3">
-                <button id="whatsappContactLink" onclick="sendWhatsAppInquiry()" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-medium shadow-md transition">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i>
-                        <div class="text-left">
-                            <div class="text-sm font-bold">WhatsApp Direct</div>
-                            <div class="text-xs text-emerald-100" id="whatsappNumDisplay">Nombor belum diset</div>
-                        </div>
+            <button id="whatsappContactLink" onclick="sendWhatsAppInquiry()" class="w-full flex items-center justify-between p-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-medium shadow-md transition">
+                <div class="flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <div class="text-left">
+                        <div class="text-sm font-bold">WhatsApp Direct</div>
+                        <div class="text-xs text-emerald-100" id="whatsappNumDisplay">Nombor belum diset</div>
                     </div>
-                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                </button>
-            </div>
-            <div class="mt-6 pt-4 border-t border-gray-100 dark:border-gray-800 text-center">
-                <button onclick="closeModal('contactModal')" class="text-xs text-gray-500 hover:underline">Tutup Window</button>
-            </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
         </div>
     </div>
 
@@ -450,8 +392,7 @@
                                     <th class="p-3 text-right">Tindakan</th>
                                 </tr>
                             </thead>
-                            <tbody id="adminAppsTableBody" class="divide-y divide-gray-100 dark:divide-gray-800">
-                            </tbody>
+                            <tbody id="adminAppsTableBody" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
                         </table>
                     </div>
                     <div id="appFormContainer" class="hidden border-t border-gray-200 dark:border-gray-800 pt-6">
@@ -468,8 +409,7 @@
                                 </div>
                                 <div>
                                     <label for="formCategory" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Kategori *</label>
-                                    <select id="formCategory" required class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
-                                    </select>
+                                    <select id="formCategory" required class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500"></select>
                                 </div>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -484,192 +424,137 @@
                             </div>
                             <div>
                                 <label for="formTags" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Tagging Produk (Pisahkan dengan koma)</label>
-                                <input type="text" id="formTags" placeholder="Cth: POS, Kasir, Inventori, Business, Web App" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                <input type="text" id="formTags" placeholder="Cth: POS, Kasir, Inventori, Business" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
                             </div>
                             <div>
-                                <label for="formImgUrl" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Pautan Gambar Preview (Menyokong Google Drive / URL Direct)</label>
-                                <input type="text" id="formImgUrl" placeholder="https://drive.google.com/file/d/... atau https://images.unsplash.com/..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                                <label for="formImgUrl" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Pautan Gambar Preview</label>
+                                <input type="text" id="formImgUrl" placeholder="https://drive.google.com/file/d/... atau https://..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
                             </div>
                             <div>
                                 <label for="formShortDesc" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Penerangan Ringkas</label>
                                 <input type="text" id="formShortDesc" placeholder="Penerangan 1 baris untuk paparan kad..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
                             </div>
                             <div>
-                                <label for="formFullDesc" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Penerangan Full / Butiran Terperinci / Nota Fail</label>
-                                <textarea id="formFullDesc" rows="4" placeholder="Jelaskan ciri-ciri utama aplikasi atau butiran fail anda..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500"></textarea>
+                                <label for="formFullDesc" class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Penerangan Terperinci</label>
+                                <textarea id="formFullDesc" rows="4" placeholder="Jelaskan ciri-ciri utama..." class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500"></textarea>
                             </div>
                             <div class="flex items-center gap-2 pt-1">
                                 <input type="checkbox" id="formFeatured" class="rounded text-theme-600 focus:ring-theme-500 w-4 h-4">
                                 <label for="formFeatured" class="text-xs font-medium text-gray-700 dark:text-gray-300">Tetapkan sebagai Aplikasi Utama (Featured)</label>
                             </div>
                             <div class="flex justify-end gap-2 pt-3 border-t border-gray-200 dark:border-gray-700">
-                                <button type="button" onclick="closeAppForm()" class="px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 text-xs font-medium hover:bg-gray-100 dark:hover:bg-gray-800">Batal</button>
+                                <button type="button" onclick="closeAppForm()" class="px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-700 text-xs font-medium">Batal</button>
                                 <button type="submit" class="px-5 py-2 rounded-xl bg-theme-600 hover:bg-theme-700 text-white text-xs font-medium shadow">Simpan Aplikasi</button>
                             </div>
                         </form>
                     </div>
                 </div>
-
                 <!-- TAB 2: CATEGORIES -->
                 <div id="tabCategoriesContent" class="hidden space-y-6">
-                    <div>
-                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Filter & Kategori Aplikasi</h4>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Anda boleh menambah, mengemaskini nama (edit), atau memadam filter kategori di bawah.</p>
-                    </div>
+                    <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Filter & Kategori</h4>
                     <form onsubmit="handleAddCategory(event)" class="flex gap-2 max-w-md">
-                        <input type="text" id="newCategoryInput" required placeholder="Nama Kategori/Filter Baharu..." class="flex-grow px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
-                        <button type="submit" class="px-4 py-2 rounded-xl bg-theme-600 text-white text-xs font-medium shrink-0 hover:bg-theme-700 transition">
-                            <i class="fa-solid fa-plus mr-1"></i> Tambah
-                        </button>
+                        <input type="text" id="newCategoryInput" required placeholder="Nama Kategori Baharu..." class="flex-grow px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs">
+                        <button type="submit" class="px-4 py-2 rounded-xl bg-theme-600 text-white text-xs font-medium shrink-0">Tambah</button>
                     </form>
-                    <div id="categoriesListContainer" class="space-y-2 max-w-xl">
-                    </div>
+                    <div id="categoriesListContainer" class="space-y-2 max-w-xl"></div>
                 </div>
-
                 <!-- TAB 3: BANNERS -->
                 <div id="tabBannersContent" class="hidden space-y-6">
                     <div class="flex justify-between items-center">
-                        <div>
-                            <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Banner Utama Website</h4>
-                            <p class="text-xs text-gray-500 dark:text-gray-400">Menyokong gambar latar belakang format 16:9 dari URL Google Drive atau Direct Link.</p>
-                        </div>
-                        <button onclick="openBannerForm()" class="px-3 py-1.5 text-xs font-medium bg-theme-600 hover:bg-theme-700 text-white rounded-lg transition">
-                            <i class="fa-solid fa-plus mr-1"></i> Tambah Banner
-                        </button>
+                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Banner Utama</h4>
+                        <button onclick="openBannerForm()" class="px-3 py-1.5 text-xs font-medium bg-theme-600 text-white rounded-lg">Tambah Banner</button>
                     </div>
-                    <div id="bannersList" class="space-y-3">
-                    </div>
+                    <div id="bannersList" class="space-y-3"></div>
                     <div id="bannerFormContainer" class="hidden border-t border-gray-200 dark:border-gray-800 pt-4">
                         <form id="bannerForm" onsubmit="handleSaveBanner(event)" class="space-y-3 bg-gray-50 dark:bg-gray-800/40 p-4 rounded-xl border border-gray-200 dark:border-gray-800">
                             <input type="hidden" id="formBannerId" value="">
-                            <div>
-                                <label for="bannerBadge" class="block text-xs font-semibold mb-1">Tag Lencana (Badge)</label>
-                                <input type="text" id="bannerBadge" placeholder="Cth: Showcase & Katalog Rasmi" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs">
-                            </div>
-                            <div>
-                                <label for="bannerTitleInput" class="block text-xs font-semibold mb-1">Tajuk Utama Banner *</label>
-                                <input type="text" id="bannerTitleInput" required class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs">
-                            </div>
-                            <div>
-                                <label for="bannerSubtitleInput" class="block text-xs font-semibold mb-1">Sub-Tajuk / Penerangan Banner</label>
-                                <textarea id="bannerSubtitleInput" rows="2" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs"></textarea>
-                            </div>
-                            <div>
-                                <label for="bannerImgUrlInput" class="block text-xs font-semibold mb-1">Pautan Gambar Latar Banner 16:9 (Google Drive / Web Image Link)</label>
-                                <input type="text" id="bannerImgUrlInput" placeholder="https://drive.google.com/file/d/... (Format Nisbah 16:9 digalakkan)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs">
-                            </div>
+                            <input type="text" id="bannerBadge" placeholder="Tag Lencana" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border text-xs">
+                            <input type="text" id="bannerTitleInput" required placeholder="Tajuk Banner" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border text-xs">
+                            <textarea id="bannerSubtitleInput" rows="2" placeholder="Sub-Tajuk" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border text-xs"></textarea>
+                            <input type="text" id="bannerImgUrlInput" placeholder="URL Latar Belakang (16:9)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border text-xs">
                             <div class="flex justify-end gap-2 pt-2">
                                 <button type="button" onclick="closeBannerForm()" class="px-3 py-1.5 rounded-lg border text-xs">Batal</button>
-                                <button type="submit" class="px-4 py-1.5 rounded-lg bg-theme-600 text-white text-xs font-medium">Simpan Banner</button>
+                                <button type="submit" class="px-4 py-1.5 rounded-lg bg-theme-600 text-white text-xs">Simpan</button>
                             </div>
                         </form>
                     </div>
                 </div>
-
-                <!-- TAB 4: THEME & BRAND SETTINGS -->
+                <!-- TAB 4: SITE SETTINGS -->
                 <div id="tabSiteSettingsContent" class="hidden space-y-6">
-                    <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Tetapan Tema, Logo & Maklumat Website</h4>
+                    <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Tetapan Tema & Logo Website</h4>
                     <form onsubmit="handleSaveSiteSettings(event)" class="space-y-4 max-w-lg">
-                        <div class="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800">
-                            <label for="settingThemePalette" class="block text-xs font-bold text-gray-800 dark:text-gray-200 mb-1">Pilih Warna / Tema Aplikasi</label>
-                            <p class="text-[11px] text-gray-500 dark:text-gray-400 mb-2">Logo PNG transparan akan kekal tanpa background apabila tema ditukar.</p>
-                            <select id="settingThemePalette" onchange="previewColorTheme(this.value)" class="w-full px-3 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-xs font-semibold focus:ring-2 focus:ring-theme-500">
-                                <option value="emerald">Hijau Emerald (Default)</option>
+                        <div>
+                            <label class="block text-xs font-bold mb-1">Pilih Tema Warna</label>
+                            <select id="settingThemePalette" onchange="previewColorTheme(this.value)" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border text-xs font-semibold">
+                                <option value="emerald">Hijau Emerald</option>
                                 <option value="blue">Biru Sapphire</option>
                                 <option value="red">Merah Ruby</option>
                                 <option value="yellow">Kuning Amber</option>
                                 <option value="orange">Oren Sunset</option>
                                 <option value="purple">Ungu Amethyst</option>
-                                <option value="cyan_indigo">Campuran Cyan & Indigo (Gradiasi)</option>
-                                <option value="purple_pink">Campuran Ungu & Merah Jambu (Cyber Neon)</option>
-                                <option value="amber_rose">Campuran Amber & Rose (Sunset Gradiasi)</option>
+                                <option value="cyan_indigo">Cyan & Indigo</option>
+                                <option value="purple_pink">Ungu & Pink</option>
+                                <option value="amber_rose">Amber & Rose</option>
                             </select>
                         </div>
                         <div>
-                            <label for="settingBrandName" class="block text-xs font-semibold mb-1">Nama Brand / Website *</label>
-                            <input type="text" id="settingBrandName" required class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
+                            <label class="block text-xs font-semibold mb-1">Nama Brand / Website *</label>
+                            <input type="text" id="settingBrandName" required class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border text-xs">
                         </div>
                         <div class="grid grid-cols-2 gap-3">
                             <div>
-                                <label for="settingBrandLetter" class="block text-xs font-semibold mb-1">Huruf Singkatan Logo</label>
-                                <input type="text" id="settingBrandLetter" maxlength="2" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs uppercase font-bold text-center">
+                                <label class="block text-xs font-semibold mb-1">Huruf Logo</label>
+                                <input type="text" id="settingBrandLetter" maxlength="2" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border text-xs font-bold text-center">
                             </div>
                             <div>
-                                <label for="settingBrandLogoImg" class="block text-xs font-semibold mb-1">URL Logo PNG Transparan (Google Drive / PNG Link)</label>
-                                <input type="text" id="settingBrandLogoImg" placeholder="https://drive.google.com/..." class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs">
+                                <label class="block text-xs font-semibold mb-1">URL Logo PNG</label>
+                                <input type="text" id="settingBrandLogoImg" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border text-xs">
                             </div>
                         </div>
-                        <div class="pt-2 border-t border-gray-200 dark:border-gray-800">
-                            <h5 class="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">Perhubungan Developer (WhatsApp)</h5>
-                            <div class="space-y-3">
-                                <div>
-                                    <label for="settingWhatsapp" class="block text-xs font-semibold mb-1">Nombor WhatsApp (Format Antarabangsa tanpa +)</label>
-                                    <input type="text" id="settingWhatsapp" placeholder="60123456789" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
-                                </div>
-                            </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-1">Nombor WhatsApp Direct</label>
+                            <input type="text" id="settingWhatsapp" placeholder="60123456789" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border text-xs">
                         </div>
-                        <div class="pt-2 border-t border-gray-200 dark:border-gray-800">
-                            <h5 class="text-xs font-bold text-gray-700 dark:text-gray-300 mb-2">Keselamatan Admin</h5>
-                            <div>
-                                <label for="settingAdminPin" class="block text-xs font-semibold mb-1">PIN Pentadbir Baru</label>
-                                <input type="text" id="settingAdminPin" placeholder="Tetapkan PIN baharu..." class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs focus:ring-2 focus:ring-theme-500">
-                            </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-1">PIN Admin Baru</label>
+                            <input type="text" id="settingAdminPin" placeholder="PIN Baharu" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border text-xs">
                         </div>
-                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-theme-600 hover:bg-theme-700 text-white text-xs font-medium shadow">
-                            <i class="fa-solid fa-floppy-disk mr-1"></i> Simpan Tetapan Laman
-                        </button>
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-theme-600 text-white text-xs font-medium">Simpan Tetapan</button>
                     </form>
                 </div>
-
                 <!-- TAB 5: BACKEND & SYNC -->
                 <div id="tabSettingsContent" class="hidden space-y-6">
-                    <div>
-                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Google Apps Script Integration (Cloud Sync)</h4>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Masukkan URL Web App dari Google Apps Script untuk menyinkronkan data dengan Google Sheets.</p>
-                    </div>
-                    
-                    <div id="appscriptStatusBox" class="p-4 rounded-xl border flex items-center justify-between bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-900 text-rose-800 dark:text-rose-300">
+                    <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Google Apps Script Integration (Cloud Sync)</h4>
+                    <div id="appscriptStatusBox" class="p-4 rounded-xl border flex items-center justify-between bg-rose-50 dark:bg-rose-950/40 border-rose-200 text-rose-800">
                         <div class="flex items-center gap-3">
                             <div id="statusIcon" class="w-3 h-3 rounded-full bg-rose-500"></div>
                             <div>
-                                <div id="statusTitle" class="text-xs font-bold">Google Apps Script Disambung: Tidak</div>
-                                <div id="statusDesc" class="text-[11px] text-gray-500 dark:text-gray-400">Aplikasi kini menggunakan penyimpanan lokal browser sahaja.</div>
+                                <div id="statusTitle" class="text-xs font-bold">Google Apps Script Disambung: TIDAK</div>
+                                <div id="statusDesc" class="text-[11px] text-gray-500">Menggunakan penyimpanan lokal browser.</div>
                             </div>
                         </div>
-                        <button type="button" onclick="syncDataFromCloud()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 transition">
+                        <button type="button" onclick="syncDataFromCloud()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-gray-800 border hover:bg-gray-50 transition">
                             <i class="fa-solid fa-rotate"></i> Uji Sambungan
                         </button>
                     </div>
                     <form onsubmit="handleSaveApiUrl(event)" class="space-y-3 max-w-xl">
                         <div>
                             <label for="apiUrlInput" class="block text-xs font-semibold mb-1">URL Google Web App (Code.gs Executable)</label>
-                            <input type="url" id="apiUrlInput" placeholder="https://script.google.com/macros/s/.../exec" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-xs">
+                            <input type="url" id="apiUrlInput" placeholder="https://script.google.com/macros/s/.../exec" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border text-xs">
                         </div>
                         <div class="flex gap-2">
-                            <button type="submit" class="px-4 py-2 rounded-xl bg-theme-600 text-white text-xs font-medium hover:bg-theme-700">
-                                Simpan URL & Test Sync
-                            </button>
-                            <button type="button" onclick="syncDataFromCloud()" class="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-xs font-medium hover:bg-gray-300">
-                                <i class="fa-solid fa-rotate mr-1"></i> Muat Data dari Cloud
-                            </button>
+                            <button type="submit" class="px-4 py-2 rounded-xl bg-theme-600 text-white text-xs font-medium">Simpan URL & Test Sync</button>
+                            <button type="button" onclick="syncDataFromCloud()" class="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-xs font-medium">Muat Data dari Cloud</button>
                         </div>
                     </form>
                     <hr class="border-gray-200 dark:border-gray-800">
-                    <div class="space-y-3">
-                        <h4 class="text-sm font-bold text-gray-800 dark:text-gray-200">Pengurusan Backup Data (JSON)</h4>
-                        <p class="text-xs text-gray-500 dark:text-gray-400">Muat turun salinan data portfolio anda atau muat naik fail data terdahulu.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="exportDataJSON()" class="px-3.5 py-2 rounded-xl bg-emerald-600 text-white text-xs font-medium hover:bg-emerald-700 transition">
-                                <i class="fa-solid fa-download mr-1"></i> Muat Turun Backup JSON
-                            </button>
-                            <label class="px-3.5 py-2 rounded-xl bg-blue-600 text-white text-xs font-medium hover:bg-blue-700 transition cursor-pointer">
-                                <i class="fa-solid fa-upload mr-1"></i> Import Backup JSON
-                                <input type="file" id="importJsonInput" accept=".json" onchange="importDataJSON(event)" class="hidden">
-                            </label>
-                            <button onclick="confirmResetDemoData()" class="px-3.5 py-2 rounded-xl bg-rose-600 text-white text-xs font-medium hover:bg-rose-700 transition">
-                                <i class="fa-solid fa-rotate-left mr-1"></i> Reset Ke Data Demo Asal
-                            </button>
-                        </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="exportDataJSON()" class="px-3.5 py-2 rounded-xl bg-emerald-600 text-white text-xs font-medium">Backup JSON</button>
+                        <label class="px-3.5 py-2 rounded-xl bg-blue-600 text-white text-xs font-medium cursor-pointer">
+                            Import JSON
+                            <input type="file" id="importJsonInput" accept=".json" onchange="importDataJSON(event)" class="hidden">
+                        </label>
+                        <button onclick="confirmResetDemoData()" class="px-3.5 py-2 rounded-xl bg-rose-600 text-white text-xs font-medium">Reset Data Demo</button>
                     </div>
                 </div>
             </div>
@@ -696,36 +581,26 @@
 
     <!-- CONFIRM DELETE MODAL -->
     <div id="confirmDeleteModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-sm w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 relative">
-            <div class="text-center">
-                <div class="w-12 h-12 rounded-full bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center mx-auto mb-3 text-xl">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                </div>
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Pengesahan Pemadaman</h3>
-                <p id="confirmDeleteMessage" class="text-xs text-gray-500 dark:text-gray-400 mt-2">Adakah anda pasti mahu memadam item ini?</p>
-            </div>
-            <div class="flex gap-3 mt-6">
-                <button onclick="closeModal('confirmDeleteModal')" class="flex-1 py-2 rounded-xl border border-gray-300 dark:border-gray-700 text-xs font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-                    Batal
-                </button>
-                <button id="confirmDeleteExecuteBtn" class="flex-1 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-medium shadow transition">
-                    Padam
-                </button>
+        <div class="bg-white dark:bg-gray-900 rounded-2xl max-w-sm w-full border border-gray-200 dark:border-gray-800 shadow-2xl p-6 text-center">
+            <h3 class="text-lg font-bold mb-2">Pengesahan Pemadaman</h3>
+            <p id="confirmDeleteMessage" class="text-xs text-gray-500 mb-6"></p>
+            <div class="flex gap-3">
+                <button onclick="closeModal('confirmDeleteModal')" class="flex-1 py-2 rounded-xl border text-xs">Batal</button>
+                <button id="confirmDeleteExecuteBtn" class="flex-1 py-2 rounded-xl bg-rose-600 text-white text-xs font-medium">Padam</button>
             </div>
         </div>
     </div>
 
-    <!-- TOAST NOTIFICATIONS -->
     <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
-    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
         /* ==========================================================================
-           KONFIGURASI: Sila tampal URL Google Apps Script anda di bawah
+           KONFIGURASI:
+           Tampal URL Google Apps Script yang sudah di-deploy di dalam pembuka pembuka ini:
            ========================================================================== */
-        const API_URL = "https://script.google.com/macros/s/AKfycbyfoWEBwdpgRrwLcKICrRzsWw8U1Xa0vqvHiTjubtMEVQw76bhtUb4488fdxpmIimY/exec";
+        const API_URL = "https://script.google.com/macros/s/AKfycbx8iT6X-1QQTwzR-zbz8wLG6jE8rF2523dC2Pjzhki8m91dAVbTmesEQuAjyIXumyFU/exec";
 
-        // Default Initial Dataset Fallback
         const DEFAULT_STATE = {
             brand: {
                 name: "Zariff Legacy",
@@ -822,7 +697,6 @@
                 document.documentElement.classList.remove('dark');
                 document.getElementById('themeIcon').className = 'fa-solid fa-moon text-gray-600 text-lg';
             }
-
             applyThemePalette(appState.brand.theme || 'emerald');
             document.getElementById('footerYear').textContent = new Date().getFullYear();
             
@@ -831,7 +705,6 @@
             renderCategoriesFilterDropdown();
             renderAppsGrid();
             updateSyncStatusUI();
-
             if (appState.cloudApiUrl) {
                 syncDataFromCloud(true);
             }
@@ -916,14 +789,10 @@
         function showToast(message, type = 'info') {
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
-            
-            const bgClass = type === 'success' ? 'bg-emerald-600 text-white' :
-                            type === 'error' ? 'bg-rose-600 text-white' : 'bg-gray-800 text-white';
-            const iconClass = type === 'success' ? 'fa-circle-check' :
-                             type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-info';
+            const bgClass = type === 'success' ? 'bg-emerald-600 text-white' : type === 'error' ? 'bg-rose-600 text-white' : 'bg-gray-800 text-white';
+            const iconClass = type === 'success' ? 'fa-circle-check' : type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-info';
             toast.className = `${bgClass} px-4 py-3 rounded-xl shadow-lg flex items-center gap-2.5 text-xs font-medium animate-toast pointer-events-auto max-w-sm`;
             toast.innerHTML = `<i class="fa-solid ${iconClass} text-base"></i><span>${message}</span>`;
-            
             container.appendChild(toast);
             setTimeout(() => {
                 toast.classList.add('opacity-0', 'transition-opacity', 'duration-300');
@@ -946,12 +815,8 @@
         }
 
         function renderHeroBanner() {
-            if (!appState.banners || appState.banners.length === 0) {
-                appState.banners = DEFAULT_STATE.banners;
-            }
-            if (currentActiveBannerIndex >= appState.banners.length) {
-                currentActiveBannerIndex = 0;
-            }
+            if (!appState.banners || appState.banners.length === 0) appState.banners = DEFAULT_STATE.banners;
+            if (currentActiveBannerIndex >= appState.banners.length) currentActiveBannerIndex = 0;
             const banner = appState.banners[currentActiveBannerIndex] || appState.banners[0];
             document.getElementById('bannerBadgeText').textContent = banner.badge || 'Showcase Aplikasi';
             document.getElementById('bannerTitle').textContent = banner.title || 'Inovasi Digital';
@@ -966,7 +831,6 @@
             } else {
                 bgContainer.classList.add('hidden');
             }
-
             const controls = document.getElementById('bannerControls');
             if (appState.banners.length > 1) {
                 controls.innerHTML = appState.banners.map((_, idx) => `
@@ -988,9 +852,7 @@
             const formCatSelect = document.getElementById('formCategory');
             const optionsHtml = appState.categories.map(cat => `<option value="${cat}">${cat}</option>`).join('');
             select.innerHTML = `<option value="ALL">Semua Kategori</option>` + optionsHtml;
-            if (formCatSelect) {
-                formCatSelect.innerHTML = optionsHtml;
-            }
+            if (formCatSelect) formCatSelect.innerHTML = optionsHtml;
         }
 
         function handleSearchFilter() {
@@ -1028,12 +890,9 @@
             const query = (document.getElementById('searchInput').value || '').toLowerCase().trim();
             const category = document.getElementById('categoryFilter').value;
             const sort = document.getElementById('sortOption').value;
-
-            if (query.length > 0) {
-                document.getElementById('clearSearchBtn').classList.remove('hidden');
-            } else {
-                document.getElementById('clearSearchBtn').classList.add('hidden');
-            }
+            
+            if (query.length > 0) document.getElementById('clearSearchBtn').classList.remove('hidden');
+            else document.getElementById('clearSearchBtn').classList.add('hidden');
 
             let filtered = appState.apps.filter(app => {
                 const appTagsStr = Array.isArray(app.tags) ? app.tags.join(' ') : (app.tags || '');
@@ -1062,19 +921,16 @@
             const appsCountLabel = document.getElementById('appsCountLabel');
             
             appsCountLabel.textContent = `Menunjukkan ${filtered.length} daripada ${appState.apps.length} aplikasi`;
-
             if (filtered.length === 0) {
                 grid.innerHTML = '';
                 emptyState.classList.remove('hidden');
                 return;
             }
-
             emptyState.classList.add('hidden');
             grid.innerHTML = filtered.map(app => {
                 const appImgUrl = formatImageUrl(app.imgUrl);
                 const imgFallback = `https://placehold.co/600x350/162238/ffffff?text=${encodeURIComponent(app.name)}`;
                 const isFeatured = !!app.featured;
-                
                 const tagsList = Array.isArray(app.tags) ? app.tags : (app.tags ? app.tags.split(',').map(t=>t.trim()) : []);
                 const tagsHtml = tagsList.map(t => `
                     <button onclick="event.stopPropagation(); filterByTag('${t}')" class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 hover:bg-theme-100 text-gray-600 hover:text-theme-800 dark:bg-gray-800 dark:hover:bg-theme-900/50 dark:text-gray-300 dark:hover:text-theme-300 transition">
@@ -1083,7 +939,7 @@
                 `).join('');
 
                 return `
-                <div class="group bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800/80 shadow-sm hover:shadow-xl hover:border-theme-500/50 dark:hover:border-theme-500/50 transition-all duration-300 flex flex-col overflow-hidden relative">
+                <div class="group bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800/80 shadow-sm hover:shadow-xl hover:border-theme-500/50 transition-all duration-300 flex flex-col overflow-hidden relative">
                     ${isFeatured ? `
                     <div class="absolute top-3 left-3 z-10 bg-amber-500 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
                         <i class="fa-solid fa-star"></i> Utama
@@ -1092,7 +948,7 @@
                     <div class="relative h-44 bg-gray-100 dark:bg-gray-800 overflow-hidden cursor-pointer" onclick="openAppDetailModal('${app.id}')">
                         <img src="${appImgUrl || imgFallback}" alt="${app.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='${imgFallback}';">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                            <span class="text-xs text-white font-medium inline-flex items-center gap-1"><i class="fa-solid fa-eye"></i> Lihat Butiran Terperinci</span>
+                            <span class="text-xs text-white font-medium inline-flex items-center gap-1"><i class="fa-solid fa-eye"></i> Lihat Butiran</span>
                         </div>
                     </div>
                     <div class="p-5 flex flex-col flex-grow">
@@ -1100,26 +956,26 @@
                             <span class="px-2.5 py-0.5 text-[11px] font-semibold rounded-md bg-theme-50 dark:bg-theme-950 text-theme-700 dark:text-theme-300 border border-theme-200 dark:border-theme-800">
                                 ${app.category || 'General'}
                             </span>
-                            <span class="text-xs font-bold ${app.status === 'Percuma' ? 'text-emerald-600 dark:text-emerald-400' : 'text-theme-600 dark:text-theme-400'}">
+                            <span class="text-xs font-bold ${app.status === 'Percuma' ? 'text-emerald-600' : 'text-theme-600'}">
                                 ${app.status || 'Aktif'}
                             </span>
                         </div>
-                        <h3 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-theme-600 dark:group-hover:text-theme-400 transition-colors line-clamp-1 cursor-pointer" onclick="openAppDetailModal('${app.id}')">
+                        <h3 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-theme-600 transition-colors line-clamp-1 cursor-pointer" onclick="openAppDetailModal('${app.id}')">
                             ${app.name}
                         </h3>
                         <p class="text-xs text-gray-600 dark:text-gray-400 mt-1.5 mb-3 line-clamp-2 leading-relaxed">
-                            ${app.shortDesc || app.fullDesc || 'Tiada penerangan disediakan.'}
+                            ${app.shortDesc || app.fullDesc || 'Tiada penerangan.'}
                         </p>
                         ${tagsHtml ? `<div class="flex flex-wrap gap-1 mb-4">${tagsHtml}</div>` : '<div class="mb-2"></div>'}
                         <div class="pt-3 border-t border-gray-100 dark:border-gray-800/80 flex items-center justify-between gap-2 mt-auto">
-                            <button onclick="openAppDetailModal('${app.id}')" class="px-3 py-1.5 rounded-lg text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                            <button onclick="openAppDetailModal('${app.id}')" class="px-3 py-1.5 rounded-lg text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 transition">
                                 Butiran
                             </button>
                             <div class="flex items-center gap-1.5">
-                                <button onclick="quickInquireWhatsApp('${app.id}')" class="p-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 hover:bg-emerald-100 dark:hover:bg-emerald-900 transition" title="Tanya WhatsApp">
+                                <button onclick="quickInquireWhatsApp('${app.id}')" class="p-2 rounded-lg text-emerald-600 bg-emerald-50 dark:bg-emerald-950 hover:bg-emerald-100 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i>
                                 </button>
-                                <a href="${app.appUrl || '#'}" target="_blank" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-white bg-theme-600 hover:bg-theme-700 shadow-sm transition inline-flex items-center gap-1">
+                                <a href="${app.appUrl || '#'}" target="_blank" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-white bg-theme-600 hover:bg-theme-700 transition inline-flex items-center gap-1">
                                     <span>Buka</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
                                 </a>
                             </div>
@@ -1130,13 +986,8 @@
             }).join('');
         }
 
-        function openModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-        }
+        function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
         function openAppDetailModal(appId) {
             const app = appState.apps.find(a => a.id === appId);
@@ -1153,35 +1004,25 @@
             const tagsList = Array.isArray(app.tags) ? app.tags : (app.tags ? app.tags.split(',').map(t=>t.trim()) : []);
             const tagsContainer = document.getElementById('detailAppTagsContainer');
             if (tagsList.length > 0) {
-                tagsContainer.innerHTML = tagsList.map(t => `
-                    <span class="px-2.5 py-1 rounded-lg bg-theme-50 dark:bg-theme-950 text-theme-700 dark:text-theme-300 text-xs font-medium border border-theme-200 dark:border-theme-800">
-                        #${t}
-                    </span>
-                `).join('');
+                tagsContainer.innerHTML = tagsList.map(t => `<span class="px-2.5 py-1 rounded-lg bg-theme-50 dark:bg-theme-950 text-theme-700 dark:text-theme-300 text-xs font-medium border border-theme-200 dark:border-theme-800">#${t}</span>`).join('');
             } else {
                 tagsContainer.innerHTML = '';
             }
-
             document.getElementById('detailOpenAppBtn').href = app.appUrl || '#';
             document.getElementById('detailAppImg').src = formatImageUrl(app.imgUrl) || `https://placehold.co/800x400/162238/ffffff?text=${encodeURIComponent(app.name)}`;
             
             const featBadge = document.getElementById('detailFeaturedBadge');
-            if (app.featured) {
-                featBadge.classList.remove('hidden');
-            } else {
-                featBadge.classList.add('hidden');
-            }
-
+            if (app.featured) featBadge.classList.remove('hidden');
+            else featBadge.classList.add('hidden');
+            
             openModal('appDetailModal');
         }
 
-        function openContactModal() {
-            openModal('contactModal');
-        }
+        function openContactModal() { openModal('contactModal'); }
 
         function sendWhatsAppInquiry() {
             const num = appState.brand.whatsapp || '60123456789';
-            const text = encodeURIComponent(`Salam Developer ${appState.brand.name}, saya berminat untuk bertanyakan maklumat lanjut berkenaan aplikasi anda.`);
+            const text = encodeURIComponent(`Salam Developer ${appState.brand.name}, saya berminat untuk bertanyakan maklumat lanjut.`);
             window.open(`https://wa.me/${num}?text=${text}`, '_blank');
         }
 
@@ -1189,22 +1030,18 @@
             const app = appState.apps.find(a => a.id === appId);
             if (!app) return;
             const num = appState.brand.whatsapp || '60123456789';
-            const text = encodeURIComponent(`Salam Developer ${appState.brand.name}, saya berminat dengan aplikasi *${app.name}* (${app.status || ''}). Boleh berikan maklumat pendaftaran/pembelian?`);
+            const text = encodeURIComponent(`Salam Developer ${appState.brand.name}, saya berminat dengan aplikasi *${app.name}* (${app.status || ''}).`);
             window.open(`https://wa.me/${num}?text=${text}`, '_blank');
         }
 
         function contactAppInquiry() {
-            if (currentSelectedAppForInquiry) {
-                quickInquireWhatsApp(currentSelectedAppForInquiry.id);
-            } else {
-                sendWhatsAppInquiry();
-            }
+            if (currentSelectedAppForInquiry) quickInquireWhatsApp(currentSelectedAppForInquiry.id);
+            else sendWhatsAppInquiry();
         }
 
         function handleAdminTrigger() {
-            if (isAdminLoggedIn) {
-                openAdminDashboard();
-            } else {
+            if (isAdminLoggedIn) openAdminDashboard();
+            else {
                 document.getElementById('adminPinInput').value = '';
                 openModal('adminLoginModal');
             }
@@ -1221,7 +1058,7 @@
                 openAdminDashboard();
                 showToast('Log masuk Pentadbir berjaya!', 'success');
             } else {
-                showToast('PIN Admin salah. Sila cuba lagi.', 'error');
+                showToast('PIN Admin salah.', 'error');
             }
         }
 
@@ -1251,7 +1088,7 @@
                     btn.className = 'px-3 py-2 text-xs font-semibold border-b-2 border-theme-500 text-theme-600 dark:text-theme-400';
                     content.classList.remove('hidden');
                 } else {
-                    btn.className = 'px-3 py-2 text-xs font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300';
+                    btn.className = 'px-3 py-2 text-xs font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700';
                     content.classList.add('hidden');
                 }
             });
@@ -1272,19 +1109,13 @@
                         <div class="font-bold text-gray-900 dark:text-white">${app.name}</div>
                         <div class="text-[10px] text-gray-400 line-clamp-1">${app.appUrl || ''}</div>
                     </td>
-                    <td class="p-3">
-                        <span class="px-2 py-0.5 text-[10px] rounded bg-gray-100 dark:bg-gray-800">${app.category}</span>
-                    </td>
-                    <td class="p-3">
-                        <div class="flex flex-wrap gap-1">${tagPills}</div>
-                    </td>
+                    <td class="p-3"><span class="px-2 py-0.5 text-[10px] rounded bg-gray-100 dark:bg-gray-800">${app.category}</span></td>
+                    <td class="p-3"><div class="flex flex-wrap gap-1">${tagPills}</div></td>
                     <td class="p-3 font-semibold text-theme-600 dark:text-theme-400">${app.status || '-'}</td>
-                    <td class="p-3">
-                        ${app.featured ? '<i class="fa-solid fa-star text-amber-500"></i>' : '<span class="text-gray-300">-</span>'}
-                    </td>
+                    <td class="p-3">${app.featured ? '<i class="fa-solid fa-star text-amber-500"></i>' : '<span class="text-gray-300">-</span>'}</td>
                     <td class="p-3 text-right space-x-1">
-                        <button onclick="editAppForm('${app.id}')" class="p-1.5 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/50 rounded" title="Edit App"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button onclick="deleteApp('${app.id}')" class="p-1.5 text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/50 rounded" title="Padam App"><i class="fa-solid fa-trash"></i></button>
+                        <button onclick="editAppForm('${app.id}')" class="p-1.5 text-blue-600"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button onclick="deleteApp('${app.id}')" class="p-1.5 text-rose-600"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
                 `;
@@ -1298,9 +1129,7 @@
             document.getElementById('appFormContainer').classList.remove('hidden');
         }
 
-        function closeAppForm() {
-            document.getElementById('appFormContainer').classList.add('hidden');
-        }
+        function closeAppForm() { document.getElementById('appFormContainer').classList.add('hidden'); }
 
         function editAppForm(appId) {
             const app = appState.apps.find(a => a.id === appId);
@@ -1323,12 +1152,9 @@
             e.preventDefault();
             const appId = document.getElementById('formAppId').value;
             const now = new Date().toISOString().split('T')[0];
-            
             const rawTags = document.getElementById('formTags').value;
-            const parsedTags = rawTags.split(',')
-                .map(t => t.trim().replace(/^#/, ''))
-                .filter(t => t.length > 0);
-
+            const parsedTags = rawTags.split(',').map(t => t.trim().replace(/^#/, '')).filter(t => t.length > 0);
+            
             const appData = {
                 id: appId || `app-${Date.now()}`,
                 name: document.getElementById('formAppName').value.trim(),
@@ -1355,7 +1181,6 @@
                 appState.apps.unshift(appData);
                 showToast('Aplikasi baharu berjaya ditambah!', 'success');
             }
-
             saveStateToLocal();
             renderAdminAppsTable();
             renderAppsGrid();
@@ -1364,13 +1189,12 @@
 
         function deleteApp(appId) {
             const app = appState.apps.find(a => a.id === appId);
-            const appName = app ? app.name : 'aplikasi ini';
-            askDeleteConfirmation(`Adakah anda pasti mahu memadam aplikasi "${appName}"?`, () => {
+            askDeleteConfirmation(`Adakah anda pasti mahu memadam "${app ? app.name : 'aplikasi ini'}"?`, () => {
                 appState.apps = appState.apps.filter(a => a.id !== appId);
                 saveStateToLocal();
                 renderAdminAppsTable();
                 renderAppsGrid();
-                showToast('Aplikasi telah dipadam.', 'info');
+                showToast('Aplikasi dipadam.', 'info');
             });
         }
 
@@ -1384,12 +1208,8 @@
                 <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700/80">
                     <span class="text-xs font-bold text-gray-800 dark:text-gray-200">${cat}</span>
                     <div class="flex items-center gap-1">
-                        <button onclick="openEditCategoryModal('${cat}')" class="px-2.5 py-1 text-[11px] font-semibold text-blue-600 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 rounded-lg transition">
-                            <i class="fa-solid fa-pen mr-1"></i> Edit
-                        </button>
-                        <button onclick="handleDeleteCategory('${cat}')" class="px-2.5 py-1 text-[11px] font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/50 hover:bg-rose-100 rounded-lg transition">
-                            <i class="fa-solid fa-trash mr-1"></i> Padam
-                        </button>
+                        <button onclick="openEditCategoryModal('${cat}')" class="px-2.5 py-1 text-[11px] font-semibold text-blue-600 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 rounded-lg transition">Edit</button>
+                        <button onclick="handleDeleteCategory('${cat}')" class="px-2.5 py-1 text-[11px] font-semibold text-rose-600 bg-rose-50 dark:bg-rose-950/50 hover:bg-rose-100 rounded-lg transition">Padam</button>
                     </div>
                 </div>
             `).join('');
@@ -1405,7 +1225,7 @@
                 renderCategoriesFilterDropdown();
                 renderAdminCategoriesList();
                 input.value = '';
-                showToast('Kategori baharu ditambah!', 'success');
+                showToast('Kategori ditambah!', 'success');
             }
         }
 
@@ -1423,23 +1243,19 @@
             const idx = appState.categories.indexOf(oldName);
             if (idx !== -1) {
                 appState.categories[idx] = newName;
-                appState.apps.forEach(app => {
-                    if (app.category === oldName) {
-                        app.category = newName;
-                    }
-                });
+                appState.apps.forEach(app => { if (app.category === oldName) app.category = newName; });
                 saveStateToLocal();
                 renderCategoriesFilterDropdown();
                 renderAdminCategoriesList();
                 renderAdminAppsTable();
                 renderAppsGrid();
                 closeModal('editCategoryModal');
-                showToast('Kategori berjaya dikemas kini!', 'success');
+                showToast('Kategori dikemas kini!', 'success');
             }
         }
 
         function handleDeleteCategory(catName) {
-            askDeleteConfirmation(`Adakah anda pasti mahu memadam kategori "${catName}"?`, () => {
+            askDeleteConfirmation(`Padam kategori "${catName}"?`, () => {
                 appState.categories = appState.categories.filter(c => c !== catName);
                 saveStateToLocal();
                 renderCategoriesFilterDropdown();
@@ -1451,14 +1267,14 @@
         function renderAdminBannersList() {
             const list = document.getElementById('bannersList');
             list.innerHTML = appState.banners.map((b) => `
-                <div class="p-3 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-between">
+                <div class="p-3 bg-gray-50 dark:bg-gray-800 rounded-xl border flex items-center justify-between">
                     <div>
                         <div class="text-xs font-bold">${b.title}</div>
                         <div class="text-[10px] text-gray-400">${b.badge || 'Showcase'}</div>
                     </div>
                     <div class="flex gap-1">
-                        <button onclick="editBanner('${b.id}')" class="p-1.5 text-blue-600 rounded"><i class="fa-solid fa-pen"></i></button>
-                        ${appState.banners.length > 1 ? `<button onclick="deleteBanner('${b.id}')" class="p-1.5 text-rose-600 rounded"><i class="fa-solid fa-trash"></i></button>` : ''}
+                        <button onclick="editBanner('${b.id}')" class="p-1.5 text-blue-600"><i class="fa-solid fa-pen"></i></button>
+                        ${appState.banners.length > 1 ? `<button onclick="deleteBanner('${b.id}')" class="p-1.5 text-rose-600"><i class="fa-solid fa-trash"></i></button>` : ''}
                     </div>
                 </div>
             `).join('');
@@ -1470,9 +1286,7 @@
             document.getElementById('bannerFormContainer').classList.remove('hidden');
         }
 
-        function closeBannerForm() {
-            document.getElementById('bannerFormContainer').classList.add('hidden');
-        }
+        function closeBannerForm() { document.getElementById('bannerFormContainer').classList.add('hidden'); }
 
         function editBanner(id) {
             const b = appState.banners.find(x => x.id === id);
@@ -1495,19 +1309,17 @@
                 subtitle: document.getElementById('bannerSubtitleInput').value.trim(),
                 imgUrl: document.getElementById('bannerImgUrlInput').value.trim()
             };
-
             if (id) {
                 const idx = appState.banners.findIndex(x => x.id === id);
                 if (idx !== -1) appState.banners[idx] = bData;
             } else {
                 appState.banners.push(bData);
             }
-
             saveStateToLocal();
             renderHeroBanner();
             renderAdminBannersList();
             closeBannerForm();
-            showToast('Banner berjaya disimpan!', 'success');
+            showToast('Banner disimpan!', 'success');
         }
 
         function deleteBanner(id) {
@@ -1538,14 +1350,13 @@
             appState.brand.letter = document.getElementById('settingBrandLetter').value.trim().toUpperCase();
             appState.brand.logoUrl = document.getElementById('settingBrandLogoImg').value.trim();
             appState.brand.whatsapp = document.getElementById('settingWhatsapp').value.trim();
-            
             const newPin = document.getElementById('settingAdminPin').value.trim();
             if (newPin) appState.brand.pin = newPin;
 
             applyThemePalette(newTheme);
             saveStateToLocal();
             applySiteBrandSettings();
-            showToast('Tetapan laman berjaya disimpan!', 'success');
+            showToast('Tetapan disimpan!', 'success');
         }
 
         function updateSyncStatusUI() {
@@ -1556,20 +1367,20 @@
             const headerBadge = document.getElementById('adminSyncStatusBadge');
             
             if (appState.cloudApiUrl && isCloudConnected) {
-                statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-900 text-emerald-800 dark:text-emerald-300';
+                statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 text-emerald-800';
                 statusIcon.className = 'w-3 h-3 rounded-full bg-emerald-500 animate-pulse';
                 statusTitle.textContent = 'Google Apps Script Disambung: YA';
-                statusDesc.textContent = 'Aplikasi anda disinkronkan secara automatik dengan Google Sheets.';
+                statusDesc.textContent = 'Aplikasi disinkronkan dengan Google Sheets.';
                 
-                headerBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300';
+                headerBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800';
                 headerBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Disambung Ke Cloud`;
             } else {
-                statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-900 text-rose-800 dark:text-rose-300';
+                statusBox.className = 'p-4 rounded-xl border flex items-center justify-between bg-rose-50 dark:bg-rose-950/40 border-rose-200 text-rose-800';
                 statusIcon.className = 'w-3 h-3 rounded-full bg-rose-500';
                 statusTitle.textContent = 'Google Apps Script Disambung: TIDAK';
-                statusDesc.textContent = 'Aplikasi kini menggunakan penyimpanan lokal browser sahaja.';
+                statusDesc.textContent = 'Menggunakan penyimpanan lokal browser.';
                 
-                headerBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300';
+                headerBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-800';
                 headerBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-rose-500"></span> Penyimpanan Lokal`;
             }
         }
@@ -1586,13 +1397,13 @@
             if (!appState.cloudApiUrl) {
                 isCloudConnected = false;
                 updateSyncStatusUI();
-                if (!silent) showToast('Sila masukkan URL Google Apps Script yang sah.', 'error');
+                if (!silent) showToast('Sila masukkan URL Apps Script.', 'error');
                 return;
             }
             try {
-                if (!silent) showToast('Menyambung ke Google Apps Script...', 'info');
+                if (!silent) showToast('Menyambung ke Apps Script...', 'info');
                 const response = await fetch(appState.cloudApiUrl + '?action=getData');
-                if (!response.ok) throw new Error('Ralat sambungan pelayan');
+                if (!response.ok) throw new Error('Ralat sambungan');
                 const result = await response.json();
                 
                 if (result && result.status === 'success' && result.data) {
@@ -1603,7 +1414,6 @@
                     
                     isCloudConnected = true;
                     localStorage.setItem('zariff_legacy_data', JSON.stringify(appState));
-                    
                     applyThemePalette(appState.brand.theme || 'emerald');
                     applySiteBrandSettings();
                     renderHeroBanner();
@@ -1611,15 +1421,14 @@
                     renderAppsGrid();
                     updateSyncStatusUI();
                     
-                    if (!silent) showToast('Data berjaya disinkronkan dari Cloud!', 'success');
+                    if (!silent) showToast('Data disinkron dari Cloud!', 'success');
                 } else {
-                    throw new Error('Format data Cloud tidak sah');
+                    throw new Error('Format Cloud tidak sah');
                 }
             } catch (err) {
-                console.error('AppsScript Fetch Error:', err);
                 isCloudConnected = false;
                 updateSyncStatusUI();
-                if (!silent) showToast('Gagal menyambung ke Cloud Apps Script.', 'error');
+                if (!silent) showToast('Gagal menyambung ke Cloud.', 'error');
             }
         }
 
@@ -1633,19 +1442,19 @@
                     body: JSON.stringify({ action: 'saveData', data: appState })
                 });
             } catch (err) {
-                console.error('Cloud Push Error:', err);
+                console.error('Push Error:', err);
             }
         }
 
         function exportDataJSON() {
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appState, null, 2));
-            const downloadAnchor = document.createElement('a');
-            downloadAnchor.setAttribute("href", dataStr);
-            downloadAnchor.setAttribute("download", `zariff_legacy_backup_${new Date().toISOString().split('T')[0]}.json`);
-            document.body.appendChild(downloadAnchor);
-            downloadAnchor.click();
-            downloadAnchor.remove();
-            showToast('Backup JSON berjaya dimuat turun!', 'success');
+            const dl = document.createElement('a');
+            dl.setAttribute("href", dataStr);
+            dl.setAttribute("download", `zariff_legacy_backup_${new Date().toISOString().split('T')[0]}.json`);
+            document.body.appendChild(dl);
+            dl.click();
+            dl.remove();
+            showToast('Backup JSON dimuat turun!', 'success');
         }
 
         function importDataJSON(e) {
@@ -1659,9 +1468,9 @@
                         appState = imported;
                         saveStateToLocal();
                         initApp();
-                        showToast('Backup JSON berjaya diimport!', 'success');
+                        showToast('Backup JSON diimport!', 'success');
                     } else {
-                        showToast('Format fail JSON tidak sah.', 'error');
+                        showToast('Format JSON tidak sah.', 'error');
                     }
                 } catch (err) {
                     showToast('Gagal membaca fail JSON.', 'error');
@@ -1671,11 +1480,11 @@
         }
 
         function confirmResetDemoData() {
-            askDeleteConfirmation('Adakah anda pasti mahu mereset semua data ke demo asal?', () => {
+            askDeleteConfirmation('Reset semua data ke demo asal?', () => {
                 appState = JSON.parse(JSON.stringify(DEFAULT_STATE));
                 saveStateToLocal();
                 initApp();
-                showToast('Data direset ke Demo asal.', 'info');
+                showToast('Data direset.', 'info');
             });
         }
     </script>
